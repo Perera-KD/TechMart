@@ -169,6 +169,17 @@ graph LR
 2. **Database Replication:** Implement a MySQL Master-Slave replication setup, routing writes to the master and reads to replica instances.
 3. **Auto-Scaling Policy:** Configure Kubernetes HPA (Horizontal Pod Autoscaler) monitoring CPU (>70%) and EJB thread pool utilization.
 
+### 6.1 Failure Mode Analysis (SLA Breach Scenario Walkthrough)
+
+To validate and defend the projected 99.9% uptime SLA under real-world runtime failures, we conduct a Failure Mode and SLA Breach walkthrough:
+
+*   **Scenario 1: One Payara Node Crashes Mid-Checkout**
+    *   *System Response & Walkthrough:* If an active Payara application server node crashes during checkout, the upstream Nginx load balancer detects the failure via its TCP/HTTP active health checks (which fire every 5 seconds). Nginx immediately stops routing incoming requests to the failed node and redirects them to the surviving active Payara node.
+    *   *State Integrity:* Stateless session beans (like `OrderServiceBean`) are unaffected because they carry no client session state; the container routes the retried checkout requests seamlessly to beans on the surviving node. For the administrative interface, the active user session state is lost on that node. However, since the stateful session bean (`AdminSessionStateBean`) is passivated to disk (or replicated to the surviving node's Hazelcast clustered instance), the container can deserialize and recover the bean state, preserving system integrity and session context.
+*   **Scenario 2: MySQL Primary Database Node Fails**
+    *   *System Response & Walkthrough:* If the primary MySQL database instance fails, the container orchestration runtime (e.g., Kubernetes or Docker Swarm) detects the failure. A secondary database replica is promoted to primary, and the application's connection pool references are dynamically updated.
+    *   *SLA Calculation & Recovery Time:* Promoting a database replica and establishing connection pool stability takes approximately 30 seconds. A 99.9% uptime SLA allows for up to 43.8 minutes of downtime per month. Consequently, even if the primary database suffers one complete node crash per month, the 30-second failover window consumes a negligible fraction (less than 1.14%) of the monthly downtime budget, allowing the system to comfortably meet and defend its 99.9% availability commitment.
+
 ---
 
 ## References

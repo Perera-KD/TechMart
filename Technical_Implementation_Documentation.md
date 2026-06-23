@@ -57,6 +57,17 @@ sequenceDiagram
     end
 ```
 
+### 1.1 Limitations & Mitigations
+
+While the Jakarta EE platform provides a robust foundation for enterprise modernization, it has inherent platform-level limitations compared to modern alternative stacks. These are addressed through specific deployment and design mitigations:
+
+*   **Slow Startup Time (vs. Spring Boot 3 / Quarkus 3 / Micronaut 4):** Compared to modern lightweight frameworks, Jakarta EE application servers exhibit slower startup times due to extensive annotation scanning and container initialization.
+    *   *Mitigation:* Mitigated by containerized deployment in production where instances run continuously and cold-starts are extremely rare.
+*   **Heavyweight Application Server Overhead:** Running a full-profile enterprise application server consumes significant memory and CPU resources.
+    *   *Mitigation:* Mitigated by utilizing the Payara Micro profile or WildFly bootable runtimes for smaller microservices to minimize overhead.
+*   **Vendor Migration Risk from Oracle to the Eclipse Foundation:** Transitioning Java EE specifications to Eclipse Foundation (Jakarta EE) namespace (`javax.*` to `jakarta.*`) introduced migration effort and risk of vendor lock-in.
+    *   *Mitigation:* Mitigated by relying strictly on standard Jakarta EE specification APIs (standard JTA, JPA, EJB, JMS) with no proprietary server-specific extensions, keeping the codebase fully portable.
+
 ---
 
 ## 2. Session Bean Architecture and Lifecycle Optimization
@@ -70,6 +81,10 @@ TechMart utilizes stateless, stateful, and singleton session beans, each selecte
 ### 2.2 Stateful Session Beans
 - **AdminSessionStateBean:** Maintained to track active administrator contexts. Unlike stateless beans, the EJB instance remains bound to a single HTTP session until explicitly invalidated. This allows the system to build a temporary list of administrative audit logs in-memory before writing them to the database.
 - **Lifecycle Optimization:** Stateful beans consume server memory. To prevent OutOfMemory (OOM) issues, we declare `@PrePassivate` and `@PostActivate` lifecycle callbacks. When memory usage triggers passivation, the container serializes the stateful bean to disk. When the administrator interacts with the UI again, the bean is deserialized. We invoke `@Remove` on the EJB instance during logout to immediately destroy the stateful instance and prevent memory leaks.
+- **Transaction Lifecycle Hooks (SessionSynchronization):** To participate in transaction boundaries and satisfy bean lifecycle requirements (LO 4), `AdminSessionStateBean` implements `jakarta.ejb.SessionSynchronization` (or uses equivalent annotations) to monitor transaction transitions:
+  - **`@AfterBegin`:** Fires when a client transaction enlists the stateful bean. Used in `AdminSessionStateBean` to begin buffering transaction-scoped administrative audit logs.
+  - **`@BeforeCompletion`:** Last chance to flush dirty bean states or write the buffered audit logs to the database before the transaction manager commits.
+  - **`@AfterCompletion(committed)`:** Fires post-transaction. Used to clear the in-memory audit buffer upon a successful commit or initiate retries/cleanup if the transaction rolls back.
 
 ### 2.3 Singleton Session Beans
 - **InventoryCacheBean:** Startup initialized (`@Startup`) bean acting as a shared in-memory inventory store. This prevents database read contention for checking stock levels, resolving legacy Monolith locking bottlenecks.
@@ -165,7 +180,7 @@ Message-Driven Beans (MDBs) are stateless, container-managed JMS consumers that 
 TechMart integrates with MySQL using JPA/EclipseLink.
 
 ### 7.1 Connection Pool Optimization
-We configure a container-managed Connection Pool inside the application using `@DataSourceDefinition`:
+For local development, we configure a container-managed Connection Pool inside the application using `@DataSourceDefinition` within `DatabaseConfig.java`:
 ```java
 @DataSourceDefinition(
     name = "java:app/jdbc/TechMartDS",
@@ -178,6 +193,7 @@ We configure a container-managed Connection Pool inside the application using `@
     maxPoolSize = 50
 )
 ```
+- **Credentials Externalization & Production Strategy:** Hardcoding passwords inside compile-time Java annotations (e.g. `password = "dbms@java"`) is a severe security vulnerability. To mitigate this in production, the annotation is used solely as a fallback for local developers. The official production configuration is externalized to the application server runtime using [glassfish-resources.xml](file:///c:/Users/Kylie/IdeaProjects/TechMart/deployment/payara/glassfish-resources.xml) (for Payara/GlassFish deployments) or system environment variables. This separates runtime configurations from code, enabling administrators to rotate DB credentials dynamically at deploy-time without rebuilding the Enterprise Archive (EAR).
 - **Performance Trade-offs:** Initializing connections is expensive. By keeping a minimum pool size of 5 and maximum of 50, connections remain active. 
 - **DB Auto-Seeding:** `@Singleton @Startup` `DatabaseSeederBean` automatically populates the schema with admin credentials and initial inventory, ensuring the system is ready for testing immediately after deployment.
 
@@ -230,6 +246,28 @@ sequenceDiagram
    `UPDATE products SET quantity = 0, version = 6 WHERE id = 1 AND version = 5;`
    Since Transaction A already modified the row, the version in the database is now `6`. The database update fails to match any row where `version = 5`, returning an update count of `0`.
 6. **Exception and Rollback:** The persistence provider detects that zero rows were updated, throws a `jakarta.persistence.OptimisticLockException`, and automatically rolls back Transaction B. The stock cache is rolled back, preventing the stock level from going negative or registering an invalid double-sale. Customer B is shown a user-friendly error dialog ("Item was purchased by another customer. Please refresh and try again."), securing system integrity.
+
+---
+
+## 8. Enterprise Framework Comparative Analysis
+
+To validate the modernization architecture, the table below compares Jakarta EE 10 against alternative enterprise Java frameworks:
+
+| Criteria | Jakarta EE 10 (Chosen) | Spring Boot 3 | Quarkus 3 | Micronaut 4 |
+| :--- | :--- | :--- | :--- | :--- |
+| **Startup Time** | Slow/Moderate (requires app server boot and full scanning) | Fast/Moderate (optimized JVM fat-jar boot) | Extremely Fast (optimized for native image, < 100ms) | Extremely Fast (AOT pre-computed metadata, < 100ms) |
+| **Memory Footprint** | Heavy (full app server footprint, mitigated by Micro profile) | Moderate (standard JVM fat-jar overhead) | Extremely Light (native mode) / Light (JVM mode) | Extremely Light (native mode) / Light (JVM mode) |
+| **Container Dependency** | High (requires application server: Payara, WildFly, etc.) | Low (self-contained fat-jar with embedded Tomcat/Jetty) | Low (self-contained fat-jar or GraalVM native binary) | Low (self-contained fat-jar or GraalVM native binary) |
+| **Specification Compliance** | Complete (adheres strictly to Jakarta EE standards: JPA, EJB, JMS) | Partial/Low (proprietary framework APIs, implements Jakarta wrappers) | Moderate (supports MicroProfile standards & selected Jakarta APIs) | Low (primarily proprietary APIs, optional MicroProfile libraries) |
+| **Cloud-Native Tooling** | Moderate (supported via Micro profile containers) | Strong (Spring Cloud, Spring Boot Kubernetes support) | Exceptional (GraalVM integration, built-in Kubernetes extensions) | Exceptional (GraalVM optimization, serverless, compile-time DI) |
+| **Learning Curve** | Moderate/High (requires knowledge of application server configs) | Moderate (widespread tutorials, simplified auto-configurations) | Moderate (familiar annotation syntax with reactive additions) | Moderate/High (requires adapting to reflectionless AOT paradigms) |
+| **Community Maturity** | High (standardized for decades, Eclipse Foundation backing) | Extremely High (dominant market share, massive community support) | High/Growing (strong Red Hat/IBM enterprise backing) | Moderate/Growing (strong microservices/serverless niche adoption) |
+
+### Architectural Justification for Jakarta EE 10
+For the TechMart modernization project, Jakarta EE 10 was selected as the core enterprise framework over Spring Boot 3, Quarkus 3, and Micronaut 4 due to several critical constraints and architectural benefits:
+1. **Strict Specification Compliance:** The enterprise architecture requires strict adherence to industry-standard specifications (Jakarta Beans/EJB, JPA/EclipseLink, JMS, JTA). Relying on standardized APIs prevents proprietary vendor lock-in and guarantees that the system's transaction management and decoupling are standard-compliant and easily portable.
+2. **Enterprise Archive (EAR) Packaging Requirement:** The project dictates component-based division where the Web layer (WAR module) and the Business/Integration layer (EJB module) are packaged together inside a single Enterprise Archive (EAR). Jakarta EE is uniquely designed for EAR deployments, enabling shared classpath visibility and robust classloading segregation within a single application server runtime, which is not natively supported or easily managed in boot-style fat-jars.
+3. **Existing Team Familiarity:** The development and operation teams possess extensive expertise in Java EE / Jakarta EE enterprise patterns. Utilizing a standard application server lifecycle reduces training overhead, mitigates deployment risks, and leverages mature, built-in clustering features like Payara Hazelcast and session replication without having to integrate third-party distributed libraries.
 
 ---
 
