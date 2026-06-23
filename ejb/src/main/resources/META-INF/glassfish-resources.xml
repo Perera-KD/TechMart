@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources SYSTEM "file:///C:/Program%20Files/payara6/glassfish/lib/dtds/glassfish-resources_1_5.dtd">
+<resources>
+    <!-- JMS Connection Factory -->
+    <connector-connection-pool name="jms/TechMartConnectionFactoryPool"
+                               resource-adapter-name="jmsra"
+                               connection-definition-name="jakarta.jms.ConnectionFactory"
+                               max-pool-size="30"/>
+    <connector-resource jndi-name="java:module/TechMartConnectionFactory"
+                        pool-name="jms/TechMartConnectionFactoryPool"/>
+
+    <!-- JMS Order Queue -->
+    <admin-object-resource jndi-name="java:module/TechMartOrderQueue"
+                           res-adapter="jmsra"
+                           res-type="jakarta.jms.Queue">
+        <property name="Name" value="TechMartOrderQueuePhysical"/>
+    </admin-object-resource>
+
+    <!-- JMS Audit Topic -->
+    <admin-object-resource jndi-name="java:module/TechMartAuditTopic"
+                           res-adapter="jmsra"
+                           res-type="jakarta.jms.Topic">
+        <property name="Name" value="TechMartAuditTopicPhysical"/>
+    </admin-object-resource>
+</resources>

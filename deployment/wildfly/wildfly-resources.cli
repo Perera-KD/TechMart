@@ -1,0 +1,38 @@
+# Connect to WildFly CLI controller
+connect
+
+# 1. Add MySQL Driver module (assuming MySQL driver JAR is placed under wildfly modules path)
+/subsystem=datasources/jdbc-driver=mysql:add(driver-name=mysql,driver-module-name=com.mysql,driver-class-name=com.mysql.cj.jdbc.Driver)
+
+# 2. Add MySQL Connection Pool Datasource
+data-source add \
+    --name=TechMartDS \
+    --jndi-name=java:app/jdbc/TechMartDS \
+    --driver-name=mysql \
+    --connection-url=jdbc:mysql://techmart-mysql-primary:3306/techmart_db?createDatabaseIfNotExist=true \
+    --user-name=techmart_user \
+    --password=techmart_pass \
+    --initial-pool-size=5 \
+    --min-pool-size=5 \
+    --max-pool-size=50 \
+    --check-valid-connection-sql="SELECT 1" \
+    --background-validation=true \
+    --background-validation-millis=60000
+
+# 3. Configure Messaging ActiveMQ Subsystem Connection Factory
+/subsystem=messaging-activemq/server=default/connection-factory=TechMartCF:add( \
+    entries=["java:module/TechMartConnectionFactory"], \
+    connectors=["http-connector"])
+
+# 4. Add Order Queue
+jms-queue add \
+    --queue-address=TechMartOrderQueue \
+    --entries=["java:module/TechMartOrderQueue"]
+
+# 5. Add Audit Topic
+jms-topic add \
+    --topic-address=TechMartAuditTopic \
+    --entries=["java:module/TechMartAuditTopic"]
+
+# Reload server to apply configuration changes
+reload

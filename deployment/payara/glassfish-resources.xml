@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN" 
+  "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+    <!-- JDBC Connection Pool for MySQL (TechMartDS) -->
+    <jdbc-connection-pool name="TechMartPool" 
+                          res-type="javax.sql.DataSource" 
+                          datasource-classname="com.mysql.cj.jdbc.MysqlDataSource">
+        <property name="url" value="jdbc:mysql://techmart-mysql-primary:3306/techmart_db?createDatabaseIfNotExist=true"/>
+        <property name="user" value="techmart_user"/>
+        <property name="password" value="techmart_pass"/>
+        <property name="initialPoolSize" value="5"/>
+        <property name="minPoolSize" value="5"/>
+        <property name="maxPoolSize" value="50"/>
+        <property name="idleTimeoutInSeconds" value="300"/>
+    </jdbc-connection-pool>
+
+    <!-- JDBC Resource binding to the JNDI name expected by the app -->
+    <jdbc-resource jndi-name="java:app/jdbc/TechMartDS" pool-name="TechMartPool"/>
+
+    <!-- JMS Connection Factory -->
+    <connector-connection-pool name="TechMartConnectionPool"
+                               resource-adapter-name="jmsra"
+                               connection-definition-name="jakarta.jms.ConnectionFactory">
+    </connector-connection-pool>
+    <connector-resource jndi-name="java:module/TechMartConnectionFactory" pool-name="TechMartConnectionPool"/>
+
+    <!-- JMS Order Queue Destination -->
+    <admin-object-resource jndi-name="java:module/TechMartOrderQueue"
+                           res-type="jakarta.jms.Queue"
+                           res-adapter="jmsra">
+        <property name="Name" value="TechMartOrderQueue"/>
+    </admin-object-resource>
+
+    <!-- JMS Audit Topic Destination -->
+    <admin-object-resource jndi-name="java:module/TechMartAuditTopic"
+                           res-type="jakarta.jms.Topic"
+                           res-adapter="jmsra">
+        <property name="Name" value="TechMartAuditTopic"/>
+    </admin-object-resource>
+</resources>

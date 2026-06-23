@@ -1,0 +1,88 @@
+version: '3.8'
+
+services:
+  # Load Balancer to distribute traffic between Payara nodes
+  load-balancer:
+    image: nginx:alpine
+    container_name: techmart-load-balancer
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - payara-node1
+      - payara-node2
+    networks:
+      - techmart-network
+
+  # Clustered Payara Server Node 1
+  payara-node1:
+    image: payara/server-full:6.2024.5-jdk17
+    container_name: techmart-payara-node1
+    environment:
+      - JVM_ARGS=-Dpayara.instanceName=node1 -Dhz.cluster.name=techmart-hazelcast
+    volumes:
+      - ../ear/target/TechMart.ear:/opt/payara/deployments/TechMart.ear
+      - ./payara/glassfish-resources.xml:/opt/payara/bootstrap/glassfish-resources.xml
+    ports:
+      - "8081:8080" # Application access node 1
+      - "4848:4848" # Admin console node 1
+    depends_on:
+      - mysql-primary
+    networks:
+      - techmart-network
+
+  # Clustered Payara Server Node 2
+  payara-node2:
+    image: payara/server-full:6.2024.5-jdk17
+    container_name: techmart-payara-node2
+    environment:
+      - JVM_ARGS=-Dpayara.instanceName=node2 -Dhz.cluster.name=techmart-hazelcast
+    volumes:
+      - ../ear/target/TechMart.ear:/opt/payara/deployments/TechMart.ear
+      - ./payara/glassfish-resources.xml:/opt/payara/bootstrap/glassfish-resources.xml
+    ports:
+      - "8082:8080" # Application access node 2
+    depends_on:
+      - mysql-primary
+    networks:
+      - techmart-network
+
+  # MySQL Primary (Write Node)
+  mysql-primary:
+    image: mysql:8.0
+    container_name: techmart-mysql-primary
+    environment:
+      - MYSQL_ROOT_PASSWORD=dbms@java
+      - MYSQL_DATABASE=techmart_db
+      - MYSQL_USER=techmart_user
+      - MYSQL_PASSWORD=techmart_pass
+    command: --server-id=1 --log-bin=mysql-bin --binlog-do-db=techmart_db
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-primary-data:/var/lib/mysql
+    networks:
+      - techmart-network
+
+  # MySQL Replica (Read Node)
+  mysql-replica:
+    image: mysql:8.0
+    container_name: techmart-mysql-replica
+    environment:
+      - MYSQL_ROOT_PASSWORD=dbms@java
+    command: --server-id=2 --log-bin=mysql-bin --binlog-do-db=techmart_db --read-only=1
+    depends_on:
+      - mysql-primary
+    volumes:
+      - mysql-replica-data:/var/lib/mysql
+    networks:
+      - techmart-network
+
+volumes:
+  mysql-primary-data:
+  mysql-replica-data:
+
+networks:
+  techmart-network:
+    driver: bridge
