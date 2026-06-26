@@ -147,6 +147,49 @@ If the async thread stalls beyond 3 seconds, a `TimeoutException` is thrown. The
 ### 4.2 Failure Recovery
 If the recipient email contains the keyword "error", a `RuntimeException` is thrown. The caller catches this via the `Future` object and logs it in the system registry, illustrating resilient recovery.
 
+### 4.3 Circuit Breaker Pattern for External Services
+
+In an enterprise environment, TechMart often integrates with external systems such as payment gateways or third-party logistics. Under the Non-Functional Requirements (NFR) reliability analysis, protecting the application from cascading failures due to external service outages is critical. 
+
+To achieve this, the system incorporates the **Circuit Breaker Pattern** using **MicroProfile Fault Tolerance** annotations (specifically `@CircuitBreaker` and `@Fallback`). This prevents the application from repeatedly calling a failing dependency, protecting thread pools from exhaustion.
+
+#### Circuit Breaker Configuration & Implementation
+When the checkout process invokes an external payment processor, the call is wrapped in a circuit-breaker protected method:
+
+```java
+import org.eclipse.microprofile.faulttolerance.CircuitBreaker;
+import org.eclipse.microprofile.faulttolerance.Fallback;
+import java.time.temporal.ChronoUnit;
+
+public class PaymentService {
+
+    @CircuitBreaker(
+        requestVolumeThreshold = 4, // Analyze the last 4 requests
+        failureRatio = 0.5,         // Trip if 50% or more of requests fail
+        delay = 10000,              // Keep circuit open for 10 seconds before testing
+        delayUnit = ChronoUnit.MILLIS,
+        successThreshold = 2        // 2 consecutive successes to close the circuit again
+    )
+    @Fallback(fallbackMethod = "fallbackPaymentHandler")
+    public boolean processExternalPayment(String orderId, double amount) {
+        // Implementation of HTTP REST call to external payment gateway API
+        return callExternalGateway(orderId, amount);
+    }
+
+    public boolean fallbackPaymentHandler(String orderId, double amount) {
+        // Fallback action when external service is unavailable (e.g. queue order for retry)
+        System.out.println("Payment gateway failed. Routing order " + orderId + " to deferred queue.");
+        return false; 
+    }
+}
+```
+
+#### State Transition Logic
+The `@CircuitBreaker` annotation enforces three distinct states:
+1. **Closed (Normal Operation):** All checkout threads flow to the external gateway. Response times and failures are monitored. If the failure ratio stays below 50% within a sliding window of 4 requests, the circuit remains closed.
+2. **Open (Service Disrupted):** If 2 out of the last 4 calls fail, the `failureRatio` hits `0.5`, tripping the circuit. Subsequent calls immediately bypass the gateway, triggering the `@Fallback` method (`fallbackPaymentHandler`). This fails fast, saving valuable thread resources from blocking on sockets and avoiding cascading thread pool exhaustion.
+3. **Half-Open (Recovery Attempt):** After `10,000ms` (10 seconds), the circuit enters a Half-Open state. The container permits a trial subset of traffic to flow through. If `2` consecutive requests succeed, the container assumes the gateway has recovered and transitions back to **Closed**. If any of these trial requests fail, it transitions back to **Open** for another 10 seconds.
+
 ---
 
 ## 5. Java Messaging System (JMS) Architecture
@@ -266,11 +309,18 @@ To validate the modernization architecture, the table below compares Jakarta EE 
 | **Learning Curve** | Moderate/High (requires knowledge of application server configs) | Moderate (widespread tutorials, simplified auto-configurations) | Moderate (familiar annotation syntax with reactive additions) | Moderate/High (requires adapting to reflectionless AOT paradigms) |
 | **Community Maturity** | High (standardized for decades, Eclipse Foundation backing) | Extremely High (dominant market share, massive community support) | High/Growing (strong Red Hat/IBM enterprise backing) | Moderate/Growing (strong microservices/serverless niche adoption) |
 
-### Architectural Justification for Jakarta EE 10
-For the TechMart modernization project, Jakarta EE 10 was selected as the core enterprise framework over Spring Boot 3, Quarkus 3, and Micronaut 4 due to several critical constraints and architectural benefits:
-1. **Strict Specification Compliance:** The enterprise architecture requires strict adherence to industry-standard specifications (Jakarta Beans/EJB, JPA/EclipseLink, JMS, JTA). Relying on standardized APIs prevents proprietary vendor lock-in and guarantees that the system's transaction management and decoupling are standard-compliant and easily portable.
-2. **Enterprise Archive (EAR) Packaging Requirement:** The project dictates component-based division where the Web layer (WAR module) and the Business/Integration layer (EJB module) are packaged together inside a single Enterprise Archive (EAR). Jakarta EE is uniquely designed for EAR deployments, enabling shared classpath visibility and robust classloading segregation within a single application server runtime, which is not natively supported or easily managed in boot-style fat-jars.
-3. **Existing Team Familiarity:** The development and operation teams possess extensive expertise in Java EE / Jakarta EE enterprise patterns. Utilizing a standard application server lifecycle reduces training overhead, mitigates deployment risks, and leverages mature, built-in clustering features like Payara Hazelcast and session replication without having to integrate third-party distributed libraries.
+### Core Weaknesses of the Java EE / Jakarta EE Platform
+While Java EE / Jakarta EE remains an enterprise benchmark, it has historically suffered from three primary weaknesses that alternative frameworks like Spring Boot or Quarkus seek to solve:
+1. **Verbosity and Configuration Complexity:** Traditional Java EE heavily relied on verbose XML deployment descriptors (`ejb-jar.xml`, `web.xml`, `persistence.xml`) and programmatic JNDI naming lookups. Although modern Jakarta EE 10 has largely mitigated this through annotations (e.g., `@Inject`, `@EJB`, `@Resource`), configuring enterprise resources (like JMS connection factories, database pools, and security domains) still requires verbose server-specific XML files (e.g., `glassfish-resources.xml`) or programmatic config definitions.
+2. **Heavy Container Overhead:** Full-profile application servers (like Payara or WildFly) host a massive suite of enterprise services (such as IIOP/CORBA, Web Services, Batch processing, and WS-Security) regardless of whether the application uses them. This leads to a substantial idle memory footprint (~700MB to 1GB JVM heap) and resource overhead, which is inefficient for microservice architectures.
+3. **Slow Startup Times:** During startup, the application server must initialize its global containers, boot the transaction manager, establish connection pools, and scan the entire classpath of the deployed EAR/WAR for enterprise annotations. This results in boot times of 10 to 30 seconds (or more), making Jakarta EE unsuitable for serverless cold-starts or fast horizontal auto-scaling compared to the pre-compiled AOT compilation of Quarkus or Micronaut.
+
+### Architectural Justification: Why Jakarta EE Was Chosen Over Spring Boot
+Despite these weaknesses, Jakarta EE 10 was selected as the core platform for the TechMart modernization project over Spring Boot 3 due to specific architectural requirements:
+
+*   **Modular EAR Packaging and Classloader Isolation:** The TechMart business requirements demand a strict component-based separation between the client web presentation layer (WAR) and the core transactional business logic (EJB JAR). Jakarta EE natively supports packaging these modules into a single Enterprise Archive (EAR). The application server isolates the classloaders of the WAR and EJB modules while allowing high-performance, zero-serialization local method invocations between them. Conversely, Spring Boot is designed around flat-classpath Fat JARs, making strict layer isolation difficult to enforce at runtime without splitting the application into separate, distributed microservice processes.
+*   **Native Distributed Transactions (JTA / Two-Phase Commit):** The TechMart checkout process must execute database updates (JPA/MySQL) and order notification queuing (JMS/MDB) atomically. If a database insert succeeds but the message queue dispatch fails, the system enters an inconsistent state. Jakarta EE’s built-in Java Transaction API (JTA) manages this out-of-the-box. The EJB container automatically enlists the JPA datasource and the JMS connection factory in a Container-Managed Transaction (CMT), coordinating a two-phase commit (2PC) seamlessly. In Spring Boot, JTA is not provided natively; implementing it requires third-party JTA transaction managers (like Atomikos or Bitronix) which are notoriously complex to configure and maintain.
+*   **Out-of-the-Box Clustered Services:** The Payara Server runtime provides clustering features, session replication, database connection pooling, and integrated JMS message brokers (OpenMQ/ActiveMQ) natively. This is managed and monitored via a single administrative console, allowing the TechMart system to leverage features like hazelcast-enabled EJB state replication without adding external libraries. In Spring Boot, achieving the same result requires integrating and managing a suite of third-party libraries (Spring Cloud, Spring Session, Redis, RabbitMQ), which increases dependency conflict risks and classpath instability.
 
 ---
 
