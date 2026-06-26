@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechMart - Product & Inventory Management</title>
-    <!-- Google Fonts -->
+
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -289,7 +289,6 @@
 </head>
 <body>
 
-    <!-- Sidebar Navigation -->
     <div class="sidebar">
         <h2>Tech<span>Mart</span></h2>
         <ul class="nav-menu">
@@ -304,14 +303,13 @@
         </div>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
         <div class="header">
             <h1>Product & Inventory Management</h1>
         </div>
 
         <div class="grid-container">
-            <!-- Products Table -->
+
             <div class="glass-card">
                 <div class="card-title">Active Warehouse Catalog</div>
                 <table>
@@ -327,7 +325,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <% 
+                        <%
                             List<Product> products = (List<Product>) request.getAttribute("products");
                             List<Warehouse> warehouses = (List<Warehouse>) request.getAttribute("warehouses");
                             if (products != null && !products.isEmpty()) {
@@ -345,7 +343,7 @@
                                             }
                                         }
                                     }
-                                    
+
                                     String stockClass = "stock-good";
                                     if (p.getQuantity() <= 10) stockClass = "stock-critical";
                                     else if (p.getQuantity() <= 50) stockClass = "stock-low";
@@ -366,9 +364,9 @@
                                             </form>
                                         </td>
                                     </tr>
-                        <% 
+                        <%
                                 }
-                            } else { 
+                            } else {
                         %>
                                 <tr>
                                     <td colspan="7" style="text-align: center; color: #8b949e; padding: 30px;">No products available. Seeding database...</td>
@@ -378,7 +376,6 @@
                 </table>
             </div>
 
-            <!-- Operations Card (Form) -->
             <div class="glass-card" style="height: fit-content;">
                 <div class="card-title" id="form-title">Provision Product</div>
                 <form id="product-form" action="<%= request.getContextPath() %>/products" method="post">
@@ -408,14 +405,14 @@
                     <div class="form-group">
                         <label for="warehouseId">Assigned Warehouse</label>
                         <select id="warehouseId" name="warehouseId" class="form-control" required>
-                            <% 
+                            <%
                                 if (warehouses != null) {
                                     for (Warehouse w : warehouses) {
                             %>
                                         <option value="<%= w.getId() %>"><%= w.getName() %> (<%= w.getLocation() %>)</option>
-                            <% 
+                            <%
                                     }
-                                } 
+                                }
                             %>
                         </select>
                     </div>

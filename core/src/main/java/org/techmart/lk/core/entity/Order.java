@@ -23,7 +23,7 @@ public class Order implements Serializable {
     private Date orderDate;
 
     @Column(nullable = false, length = 20)
-    private String status; // PENDING, PROCESSED, CANCELLED
+    private String status;
 
     @Column(name = "total_amount", nullable = false)
     private double totalAmount;

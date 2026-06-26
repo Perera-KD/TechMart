@@ -37,14 +37,13 @@ public class AuditMDB implements MessageListener {
                 String logMessage = msg.getString("message");
                 long timestamp = msg.getLong("timestamp");
 
-                // Persist the audit log entry inside the DB
                 AuditLog log = new AuditLog(eventType, logMessage, new Date(timestamp));
                 em.persist(log);
-                em.flush(); // Commit write to database
+                em.flush();
 
                 long duration = System.currentTimeMillis() - startTime;
                 metricsTracker.recordJmsMessageProcessed(duration);
-                metricsTracker.recordDbQuery(duration); // This is also a database query
+                metricsTracker.recordDbQuery(duration);
 
                 System.out.println("[AuditMDB] Audit event [" + eventType + "] persisted in " + duration + "ms");
             }

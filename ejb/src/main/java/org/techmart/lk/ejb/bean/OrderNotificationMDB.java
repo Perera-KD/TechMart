@@ -32,14 +32,13 @@ public class OrderNotificationMDB implements MessageListener {
                 String productName = msg.getString("productName");
                 int quantity = msg.getInt("quantity");
 
-                // Simulate processing latency (e.g., preparing email content, calling SMS API)
                 Thread.sleep(800);
 
                 long duration = System.currentTimeMillis() - startTime;
                 metricsTracker.recordJmsMessageProcessed(duration);
 
-                System.out.println("[OrderNotificationMDB] Async processing complete for Order #" + orderId 
-                    + " (" + quantity + "x " + productName + ") total Rs. " + totalAmount 
+                System.out.println("[OrderNotificationMDB] Async processing complete for Order #" + orderId
+                    + " (" + quantity + "x " + productName + ") total Rs. " + totalAmount
                     + " in " + duration + "ms");
             }
         } catch (Exception e) {

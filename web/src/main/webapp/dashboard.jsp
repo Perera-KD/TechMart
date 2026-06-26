@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechMart - Monitoring Dashboard</title>
-    <!-- Google Fonts -->
+
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -308,7 +308,6 @@
 </head>
 <body>
 
-    <!-- Sidebar Navigation -->
     <div class="sidebar">
         <h2>Tech<span>Mart</span></h2>
         <ul class="nav-menu">
@@ -323,7 +322,6 @@
         </div>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
         <div class="header">
             <h1>System Performance & Audit Hub</h1>
@@ -338,7 +336,7 @@
             InventoryCacheBean cache = (InventoryCacheBean) request.getAttribute("cache");
             List<AuditLog> dbLogs = (List<AuditLog>) request.getAttribute("dbLogs");
             List<String> sessionActions = (List<String>) request.getAttribute("sessionActions");
-            
+
             long reqCount = metrics != null ? metrics.getHttpRequestCount() : 0;
             double avgResp = metrics != null ? metrics.getAverageResponseTime() : 0;
             long dbCount = metrics != null ? metrics.getDbQueryCount() : 0;
@@ -348,20 +346,19 @@
             double avgJms = metrics != null ? metrics.getAverageJmsProcessingTime() : 0;
             long jndiCount = metrics != null ? metrics.getJndiLookups() : 0;
             double avgJndi = metrics != null ? metrics.getAverageJndiTime() : 0;
-            
+
             long cacheHits = cache != null ? cache.getHits() : 0;
             long cacheMisses = cache != null ? cache.getMisses() : 0;
             double cacheRate = cache != null ? cache.getCacheHitRate() * 100 : 100.0;
         %>
 
-        <!-- Top Metrics Cards -->
         <div class="metrics-grid">
             <div class="glass-card metric-card">
                 <span class="metric-label">HTTP Web Traffic</span>
                 <span class="metric-value"><%= reqCount %> reqs</span>
                 <span class="metric-sub">Avg latency: <%= String.format("%.2f", avgResp) %> ms</span>
             </div>
-            
+
             <div class="glass-card metric-card">
                 <span class="metric-label">Database Operations</span>
                 <span class="metric-value"><%= dbCount %> queries</span>
@@ -381,9 +378,8 @@
             </div>
         </div>
 
-        <!-- Cache & Stateful State row -->
         <div class="dashboard-row">
-            <!-- Inventory Cache Card -->
+
             <div class="glass-card">
                 <div class="card-title">
                     <span>Sub-second Inventory Cache (Singleton)</span>
@@ -393,21 +389,20 @@
                     <p>Total cache reads: <strong><%= cacheHits + cacheMisses %></strong></p>
                     <p>Cache Hits: <strong style="color: #56d364;"><%= cacheHits %></strong> (sub-millisecond memory fetches)</p>
                     <p>Cache Misses: <strong style="color: #ff7b72;"><%= cacheMisses %></strong> (database query fallbacks)</p>
-                    
+
                     <div class="progress-bar-container">
                         <div class="progress-bar" style="width: <%= cacheRate %>%;"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Stateful Session Audit Card -->
             <div class="glass-card">
                 <div class="card-title">
                     <span>Admin Stateful operations context</span>
                     <span style="font-size: 0.8rem; color: #8b949e;">Cleared on Logout</span>
                 </div>
                 <div class="list-container">
-                    <% 
+                    <%
                         if (sessionActions != null && !sessionActions.isEmpty()) {
                             for (int i = sessionActions.size() - 1; i >= 0; i--) {
                     %>
@@ -418,7 +413,7 @@
                                     </div>
                                     <div class="log-msg"><%= sessionActions.get(i) %></div>
                                 </div>
-                    <% 
+                    <%
                             }
                         } else {
                     %>
@@ -428,14 +423,13 @@
             </div>
         </div>
 
-        <!-- DB Persistence Audit logs (JMS Pub/Sub outputs) -->
         <div class="glass-card" style="margin-bottom: 30px;">
             <div class="card-title">
                 <span>Asynchronous Persistent Audit logs (JMS Pub/Sub Topic)</span>
                 <span style="font-size: 0.8rem; color: #8b949e;">Saved to MySQL by AuditMDB</span>
             </div>
             <div class="list-container" style="max-height: 400px;">
-                <% 
+                <%
                     if (dbLogs != null && !dbLogs.isEmpty()) {
                         for (AuditLog log : dbLogs) {
                 %>
@@ -446,7 +440,7 @@
                                 </div>
                                 <div class="log-msg"><%= log.getMessage() %></div>
                             </div>
-                <% 
+                <%
                         }
                     } else {
                 %>

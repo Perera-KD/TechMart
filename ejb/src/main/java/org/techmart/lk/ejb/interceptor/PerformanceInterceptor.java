@@ -15,19 +15,19 @@ public class PerformanceInterceptor {
         long startTime = System.currentTimeMillis();
         String className = context.getTarget().getClass().getSimpleName();
         String methodName = context.getMethod().getName();
-        
+
         System.out.println("[PerformanceInterceptor] Entering: " + className + "." + methodName);
-        
+
         try {
             return context.proceed();
         } finally {
             long duration = System.currentTimeMillis() - startTime;
             System.out.println("[PerformanceInterceptor] Exited: " + className + "." + methodName + " - Duration: " + duration + "ms");
-            
+
             if (metricsTracker != null) {
-                // If it is a service method containing 'find', 'get', 'add', 'update', 'delete', 'place', record as DB execution time
+
                 String nameLower = methodName.toLowerCase();
-                if (nameLower.contains("find") || nameLower.contains("get") || nameLower.contains("add") 
+                if (nameLower.contains("find") || nameLower.contains("get") || nameLower.contains("add")
                     || nameLower.contains("update") || nameLower.contains("delete") || nameLower.contains("place")) {
                     metricsTracker.recordDbQuery(duration);
                 }

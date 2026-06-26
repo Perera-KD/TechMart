@@ -55,7 +55,7 @@ public class DatabaseSeederBean {
         Long count = em.createQuery("SELECT COUNT(p) FROM Product p", Long.class).getSingleResult();
         if (count == 0) {
             System.out.println("[DatabaseSeeder] Inserting default product inventory...");
-            // Query warehouses to assign warehouse IDs
+
             Warehouse w1 = em.createQuery("SELECT w FROM Warehouse w WHERE w.name = 'Warehouse Colombo'", Warehouse.class).getSingleResult();
             Warehouse w2 = em.createQuery("SELECT w FROM Warehouse w WHERE w.name = 'Warehouse Kandy'", Warehouse.class).getSingleResult();
             Warehouse w3 = em.createQuery("SELECT w FROM Warehouse w WHERE w.name = 'Warehouse Galle'", Warehouse.class).getSingleResult();

@@ -24,9 +24,9 @@ public class AdminLoginServlet extends HttpServlet {
                 AdminSessionState adminState = (AdminSessionState) session.getAttribute("adminSession");
                 if (adminState != null) {
                     try {
-                        adminState.logout(); // Removes EJB state
+                        adminState.logout();
                     } catch (Exception e) {
-                        // Ignore
+
                     }
                 }
                 session.invalidate();
@@ -42,27 +42,24 @@ public class AdminLoginServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
-        // Fulfill Admin Authentication Requirement
         if ("admin".equals(username) && "admin123".equals(password)) {
             HttpSession httpSession = req.getSession(true);
-            
-            // Fulfill EJB State Management: Look up stateful bean programmatically
+
             try {
-                // Programmatic lookup to demonstrate JNDI performance monitoring
+
                 AdminSessionState adminState = ServiceLocator.lookup(
-                    "java:global/techmart/ejb-module/AdminSessionStateBean!org.techmart.lk.ejb.remote.AdminSessionState", 
+                    "java:global/techmart/ejb-module/AdminSessionStateBean!org.techmart.lk.ejb.remote.AdminSessionState",
                     AdminSessionState.class
                 );
-                
+
                 adminState.login(username);
                 adminState.addAuditAction("User logged in via web portal");
-                
-                // Store the stateful bean reference in HTTP session
+
                 httpSession.setAttribute("adminSession", adminState);
                 httpSession.setAttribute("username", username);
-                
+
                 resp.sendRedirect(req.getContextPath() + "/products");
-                
+
             } catch (NamingException e) {
                 System.err.println("[AdminLoginServlet] JNDI Lookup failed for stateful bean: " + e.getMessage());
                 req.setAttribute("error", "JNDI EJB Authentication context failure: " + e.getMessage());

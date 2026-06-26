@@ -36,7 +36,6 @@ public class DashboardServlet extends HttpServlet {
             return;
         }
 
-        // Handle metrics reset
         String reset = req.getParameter("reset");
         if ("true".equals(reset)) {
             metricsTracker.reset();
@@ -44,20 +43,17 @@ public class DashboardServlet extends HttpServlet {
             return;
         }
 
-        // Fetch stateful audit logs from active admin session bean
         AdminSessionState statefulBean = (AdminSessionState) httpSession.getAttribute("adminSession");
         if (statefulBean != null) {
             req.setAttribute("sessionActions", statefulBean.getAuditActions());
         }
 
-        // Fetch DB persistent audit logs (last 15 items)
         List<AuditLog> dbLogs = auditService.getLatestLogs(15);
 
-        // Pass statistics to JSP
         req.setAttribute("metrics", metricsTracker);
         req.setAttribute("cache", inventoryCache);
         req.setAttribute("dbLogs", dbLogs);
-        
+
         req.getRequestDispatcher("/dashboard.jsp").forward(req, resp);
     }
 }

@@ -59,11 +59,11 @@ public class OrderServlet extends HttpServlet {
 
             try {
                 Order order = orderService.placeOrder(customerName, productId, quantity);
-                
+
                 if (statefulBean != null) {
                     statefulBean.addAuditAction("Placed Order ID: " + order.getId() + " for " + customerName);
                 }
-                
+
                 if (httpSession != null) {
                     httpSession.setAttribute("successMessage", "Order processed successfully! Order ID: " + order.getId());
                 }

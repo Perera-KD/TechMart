@@ -81,13 +81,11 @@ public class OrderServiceBeanTest {
         testProduct.setPrice(120000.0);
         testProduct.setQuantity(10);
 
-        // Mock JMS setup to prevent actual network/broker lookup failures
         lenient().when(connectionFactory.createConnection()).thenReturn(connection);
         lenient().when(connection.createSession(anyBoolean(), anyInt())).thenReturn(session);
         lenient().when(session.createProducer(any())).thenReturn(messageProducer);
         lenient().when(session.createMapMessage()).thenReturn(mapMessage);
 
-        // Mock executorService.submit() to run synchronously in tests
         lenient().doAnswer(invocation -> {
             Runnable runnable = invocation.getArgument(0);
             runnable.run();
@@ -97,26 +95,22 @@ public class OrderServiceBeanTest {
 
     @Test
     public void testPlaceOrderSuccess() throws Exception {
-        // Mock DB find
+
         when(em.find(Product.class, 1L)).thenReturn(testProduct);
-        // Mock Cache checks
+
         when(inventoryCache.getStock(1L)).thenReturn(10);
         when(inventoryCache.decrementStock(1L, 2)).thenReturn(true);
 
-        // Mock Async Notification
         CompletableFuture<Boolean> future = CompletableFuture.completedFuture(true);
         when(notificationService.sendAsyncNotification(anyString(), anyString())).thenReturn(future);
 
-        // Execute Order
         Order order = orderService.placeOrder("Kylie", 1L, 2);
 
-        // Asserts
         assertNotNull(order);
         assertEquals("Kylie", order.getCustomerName());
         assertEquals(240000.0, order.getTotalAmount());
-        assertEquals(8, testProduct.getQuantity()); // Stock decremented in database entity
+        assertEquals(8, testProduct.getQuantity());
 
-        // Verify EJB/JPA methods called
         verify(em).persist(any(Order.class));
         verify(em).merge(testProduct);
         verify(inventoryCache).decrementStock(1L, 2);
@@ -125,10 +119,10 @@ public class OrderServiceBeanTest {
     @Test
     public void testPlaceOrderInsufficientStock() {
         when(em.find(Product.class, 1L)).thenReturn(testProduct);
-        when(inventoryCache.getStock(1L)).thenReturn(1); // cache reports only 1 item
+        when(inventoryCache.getStock(1L)).thenReturn(1);
 
         Exception exception = assertThrows(IllegalStateException.class, () -> {
-            orderService.placeOrder("Kylie", 1L, 2); // requesting 2 items
+            orderService.placeOrder("Kylie", 1L, 2);
         });
 
         assertTrue(exception.getMessage().contains("Insufficient stock"));
@@ -136,7 +130,7 @@ public class OrderServiceBeanTest {
 
     @Test
     public void testOrderPerformanceBenchmark() throws Exception {
-        // Measure performance across multiple sequential orders (Simulating fast iterations)
+
         int iterations = 100;
         long startTime = System.currentTimeMillis();
 
@@ -156,7 +150,6 @@ public class OrderServiceBeanTest {
         System.out.println("[Benchmark] Processed " + iterations + " orders in " + totalTime + "ms");
         System.out.println("[Benchmark] Average checkout time: " + avgTime + "ms per order");
 
-        // Assert average execution time is sub-second (our cache enables this)
         assertTrue(avgTime < 100.0, "Average checkout execution time must be under 100ms");
     }
 }

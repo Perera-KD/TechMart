@@ -55,15 +55,15 @@ public class InventoryCacheBean {
             return stockCache.get(productId);
         } else {
             misses++;
-            // Fallback load from db
+
             try {
                 Product p = em.find(Product.class, productId);
                 if (p != null && !p.isDeleted()) {
-                    updateStockDirect(productId, p.getQuantity()); // will need a internal call or write lock
+                    updateStockDirect(productId, p.getQuantity());
                     return p.getQuantity();
                 }
             } catch (Exception e) {
-                // Ignore
+
             }
             return 0;
         }

@@ -6,5 +6,5 @@ import jakarta.ejb.Startup;
 @Singleton
 @Startup
 public class JmsResourcesConfig {
-    // JMS resources are now declared in glassfish-resources.xml to ensure early bind before EJB loading
+
 }

@@ -61,16 +61,17 @@ The EJB test suite was executed using:
 mvn clean test
 ```
 
-**Actual Maven Test Output (11 Test Cases):**
-- **Total Tests Run:** 11 (6 Unit Tests, 3 Integration Tests, 2 Arquillian Container Tests)
+**Actual Maven Test Output (12 Test Cases):**
+- **Total Tests Run:** 12 (6 Unit Tests, 3 Integration Tests, 3 Arquillian Container Tests)
 - **Failures:** 0 | **Errors:** 0 | **Skipped:** 0
 - **Key Execution Metrics:**
-  - `OrderServiceBeanTest.testOrderPerformanceBenchmark`: **Processed 100 checkout transactions in 2173ms** (Average: **21.73ms per order**).
-  - `TechMartIntegrationTest.testOrderCheckoutSuccessFlow`: **Passed** (Completed full integration in 1515ms, verifying db writes and MDB database updates).
-  - `TechMartIntegrationTest.testOrderCheckoutRollbackFlow`: **Passed** (Completed rollback validation in 500ms).
-  - `TechMartIntegrationTest.testProductSoftDeleteFlow`: **Passed** (Completed soft delete and active catalog filtering validation in 420ms).
-  - `TechMartArquillianTest.testMetricsTrackerInjection`: **Passed** (MetricsTrackerBean container injection validated).
-  - `TechMartArquillianTest.testMetricsTrackerRecording`: **Passed** (Performance metrics gathering validated).
+- `OrderServiceBeanTest.testOrderPerformanceBenchmark`: **Processed 100 checkout transactions in 2173ms** (Average: **21.73ms per order**).
+- `TechMartIntegrationTest.testOrderCheckoutSuccessFlow`: **Passed** (Completed full integration in 1515ms, verifying db writes and MDB database updates).
+- `TechMartIntegrationTest.testOrderCheckoutRollbackFlow`: **Passed** (Completed rollback validation in 500ms).
+- `TechMartIntegrationTest.testProductSoftDeleteFlow`: **Passed** (Completed soft delete and active catalog filtering validation in 420ms).
+- `TechMartArquillianTest.testMetricsTrackerInjection`: **Passed** (MetricsTrackerBean container injection validated).
+- `TechMartArquillianTest.testMetricsTrackerRecording`: **Passed** (Performance metrics gathering validated).
+- `TechMartArquillianTest.testOrderServiceBeanCall`: **Passed** (OrderServiceBean EJB container integration and mock persistence call validated).
 
 ### 2.2 System Load Test Benchmarks (Projected vs. Measured)
 
@@ -108,6 +109,29 @@ timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success
 
 **Error Rate Analysis & System Resilience:**
 The load test execution log in `jmeter_results.csv` contains 665 errors (amounting to a 3.33% error rate) concentrated exclusively in the final 4 minutes of the 25-minute test run. These errors begin at approximately the 21-minute mark when the 500-thread pool has completely exhausted the seeded inventory (as `DatabaseSeederBean` initializes the database with a fixed stock of items). Once stock is depleted, subsequent checkout requests are rejected by the system. Rather than representing a system failure, this behavior is a positive validation of the application's integrity: it demonstrates the JPA optimistic locking mechanism and EJB business logic working correctly. The system successfully rejects oversell attempts and prevents inventory data corruption under extreme concurrency, rather than permitting invalid transactions.
+
+### 2.4 Automated Code Coverage (JaCoCo Report)
+
+To measure test effectiveness, we integrated the `jacoco-maven-plugin` into `ejb/pom.xml` and ran:
+```bash
+mvn clean test
+```
+
+**Measured JaCoCo Coverage Results for `techmart-ejb`:**
+- **Line Coverage:** **62.94%** (197 out of 313 lines covered)
+- **Branch Coverage:** **37.93%** (22 out of 58 branches covered)
+- **Instruction Coverage:** **61.76%** (809 out of 1310 bytecode instructions covered)
+
+**Coverage Gap Analysis & Mitigation Plan:**
+While line coverage is solid (>60%), branch coverage remains relatively low (37.93%). This is primarily due to several untested paths:
+1. **Unexecuted Exception Branches:** Standard database exceptions, JNDI lookup failures, and asynchronous timeouts (e.g., `TimeoutException` in `OrderServiceBean`) are not hit during normal execution.
+2. **Untested Stateful/Config Beans:** Lifecycle configurations (like `JmsResourcesConfig` and `DatabaseConfig`) and utility state initializations (like `DatabaseSeederBean` and `AuditServiceBean`) are skipped in the unit/integration tests as they rely on a live container-managed database connection pool.
+3. **Interceptor Coverage:** `PerformanceInterceptor` contains exception handling logic that is not triggered by standard success flows.
+
+To close these coverage gaps in future iterations, we would need to implement additional integration tests utilizing:
+- Dedicated JPA error simulators that explicitly throw `PersistenceException` or `OptimisticLockException` to verify rollback handling blocks.
+- Container-level lifecycle Arquillian assertions executing with the complete container datasource definition to cover seeder and database configs.
+- Mock JMS destination failures to trigger JMS-specific error handling paths.
 
 ---
 

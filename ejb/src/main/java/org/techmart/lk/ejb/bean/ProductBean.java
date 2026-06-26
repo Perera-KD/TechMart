@@ -31,7 +31,7 @@ public class ProductBean implements org.techmart.lk.ejb.remote.Product {
     @Override
     public Product addProduct(Product product) {
         em.persist(product);
-        em.flush(); // Force database to assign ID
+        em.flush();
         inventoryCache.updateStock(product.getId(), product.getQuantity());
         return product;
     }
@@ -49,7 +49,7 @@ public class ProductBean implements org.techmart.lk.ejb.remote.Product {
         if (p != null) {
             p.setDeleted(true);
             em.merge(p);
-            // Cache refresh
+
             inventoryCache.refreshCache();
         }
     }

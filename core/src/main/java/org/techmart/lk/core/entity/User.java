@@ -19,7 +19,7 @@ public class User implements Serializable {
     private String password;
 
     @Column(nullable = false, length = 20)
-    private String role; // e.g., "ADMIN"
+    private String role;
 
     public User() {}
 

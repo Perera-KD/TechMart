@@ -42,7 +42,7 @@ public class InMemoryJmsProvider {
 
     private final Map<String, List<MessageListener>> queueListeners = new ConcurrentHashMap<>();
     private final Map<String, List<MessageListener>> topicListeners = new ConcurrentHashMap<>();
-    
+
     private final List<Message> pendingMessages = new CopyOnWriteArrayList<>();
 
     public ConnectionFactory getConnectionFactory() {

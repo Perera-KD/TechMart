@@ -28,7 +28,6 @@ public class ProductServlet extends HttpServlet {
             return;
         }
 
-        // List products & warehouses
         List<Product> products = productService.getAllProducts();
         List<Warehouse> warehouses = productService.getAllWarehouses();
 
@@ -59,7 +58,7 @@ public class ProductServlet extends HttpServlet {
 
                 Product product = new Product(name, desc, price, qty, warehouseId);
                 productService.addProduct(product);
-                
+
                 if (statefulBean != null) {
                     statefulBean.addAuditAction("Added product: " + name);
                 }
@@ -79,7 +78,7 @@ public class ProductServlet extends HttpServlet {
                     product.setQuantity(qty);
                     product.setWarehouseId(warehouseId);
                     productService.updateProduct(product);
-                    
+
                     if (statefulBean != null) {
                         statefulBean.addAuditAction("Updated product ID: " + id);
                     }
@@ -87,7 +86,7 @@ public class ProductServlet extends HttpServlet {
             } else if ("delete".equals(action)) {
                 Long id = Long.parseLong(req.getParameter("id"));
                 productService.deleteProduct(id);
-                
+
                 if (statefulBean != null) {
                     statefulBean.addAuditAction("Deleted product ID: " + id);
                 }

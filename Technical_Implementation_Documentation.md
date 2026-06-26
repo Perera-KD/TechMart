@@ -170,7 +170,7 @@ Message-Driven Beans (MDBs) are stateless, container-managed JMS consumers that 
 ### 6.1 Lifecycle Efficiency & Optimization
 - **OrderNotificationMDB & AuditMDB:** MDBs do not have business interfaces and cannot be directly called by clients. They are managed in a container pool. When messages build up, the container scales active instances to process messages concurrently.
 - **Throughput Tuning:** MDB execution is tuned in Payara:
-    - `max-pool-size=30`: Ensures high concurrent message throughput without overwhelming database connections.
+    - `max-pool-size=30`: Ensures high concurrent message throughput without overwhelming database connections. This pool is intentionally kept smaller than the stateless EJB pool (max=128) because MDBs perform write-heavy database inserts (persisting AuditLog rows for each message), making their throughput constrained by DB write capacity rather than available CPU execution threads.
     - `acknowledgeMode=Auto-acknowledge`: Balances throughput and delivery guarantees. If processing fails, the message rolls back for redelivery.
 - **Disaster Recovery SLA (Non-Functional Requirements):**
     - **Recovery Time Objective (RTO):** 30 seconds (replica promotion time).

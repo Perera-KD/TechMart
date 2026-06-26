@@ -19,16 +19,15 @@ public class PerformanceFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-        
+
         long startTime = System.nanoTime();
-        
+
         try {
             chain.doFilter(request, response);
         } finally {
             long durationNs = System.nanoTime() - startTime;
             long durationMs = durationNs / 1_000_000;
-            
-            // Exclude static assets if needed, record standard servlet/jsp traffic
+
             if (request instanceof HttpServletRequest) {
                 HttpServletRequest req = (HttpServletRequest) request;
                 String uri = req.getRequestURI();

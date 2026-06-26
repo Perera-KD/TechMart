@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechMart - Order Processing System</title>
-    <!-- Google Fonts -->
+
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -287,7 +287,6 @@
 </head>
 <body>
 
-    <!-- Sidebar Navigation -->
     <div class="sidebar">
         <h2>Tech<span>Mart</span></h2>
         <ul class="nav-menu">
@@ -302,13 +301,11 @@
         </div>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
         <div class="header">
             <h1>Automated Order Processing</h1>
         </div>
 
-        <!-- Feedback banners -->
         <% if (session.getAttribute("successMessage") != null) { %>
             <div class="banner banner-success">
                 <%= session.getAttribute("successMessage") %>
@@ -323,7 +320,7 @@
         <% } %>
 
         <div class="grid-container">
-            <!-- Checkout Processing Form -->
+
             <div class="glass-card" style="height: fit-content;">
                 <div class="card-title">Initiate Checkout</div>
                 <form action="<%= request.getContextPath() %>/orders" method="post">
@@ -337,15 +334,15 @@
                     <div class="form-group">
                         <label for="productId">Select Product</label>
                         <select id="productId" name="productId" class="form-control" required>
-                            <% 
+                            <%
                                 List<Product> products = (List<Product>) request.getAttribute("products");
                                 if (products != null) {
                                     for (Product p : products) {
                             %>
                                         <option value="<%= p.getId() %>"><%= p.getName() %> (Available: <%= p.getQuantity() %>) - Rs. <%= String.format("%,.2f", p.getPrice()) %></option>
-                            <% 
+                            <%
                                     }
-                                } 
+                                }
                             %>
                         </select>
                     </div>
@@ -359,7 +356,6 @@
                 </form>
             </div>
 
-            <!-- Orders Log -->
             <div class="glass-card">
                 <div class="card-title">Order Processing Register</div>
                 <table>
@@ -373,7 +369,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <% 
+                        <%
                             List<Order> orders = (List<Order>) request.getAttribute("orders");
                             if (orders != null && !orders.isEmpty()) {
                                 for (Order o : orders) {
@@ -391,9 +387,9 @@
                                         <td style="font-weight: 600; color: #56d364;">Rs. <%= String.format("%,.2f", o.getTotalAmount()) %></td>
                                         <td><span class="badge <%= statusBadge %>"><%= o.getStatus() %></span></td>
                                     </tr>
-                        <% 
+                        <%
                                 }
-                            } else { 
+                            } else {
                         %>
                                 <tr>
                                     <td colspan="5" style="text-align: center; color: #8b949e; padding: 30px;">No checkout records found.</td>
