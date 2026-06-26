@@ -96,13 +96,10 @@ The following is an extract of the actual performance log recorded in [jmeter_re
 
 ```csv
 timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,Latency,Connect
-1782200950000,8,/techmart/products.jsp,200,OK,Thread Group 1-1,text,true,7,1
-1782200950100,145,/techmart/OrderServlet,200,OK,Thread Group 1-2,text,true,142,4
-1782200950200,4,/techmart/dashboard.jsp,200,OK,Thread Group 1-3,text,true,4,0
-1782200950300,5,/techmart/login.jsp,200,OK,Thread Group 1-4,text,true,5,0
-1782200950400,12,/techmart/products.jsp,200,OK,Thread Group 1-5,text,true,11,1
-1782200950500,155,/techmart/OrderServlet,200,OK,Thread Group 1-6,text,true,150,3
-1782200950600,6,/techmart/dashboard.jsp,200,OK,Thread Group 1-7,text,true,5,0
+1782286919901,831,Load Products Page,200,OK,Concurrent Users Simulation 1-4,text,true,825,1
+1782286919802,930,Load Products Page,200,OK,Concurrent Users Simulation 1-3,text,true,923,3
+1782286920738,1381,Process Checkout (Order),200,OK,Concurrent Users Simulation 1-4,text,true,298,0
+1782286920743,1376,Process Checkout (Order),200,OK,Concurrent Users Simulation 1-6,text,true,317,0
 ```
 
 ---
@@ -133,7 +130,7 @@ During load testing, two primary bottlenecks were identified and resolved:
 
 ### 4.2 JNDI Lookup Overhead
 - **Symptom:** Servlets performing EJB lookups via `InitialContext` for each request experienced a 12ms naming service traversal overhead.
-- **Resolution:** Implemented the `ServiceLocator` design pattern, which caches resolved EJB home interfaces. Subsequent requests retrieve the stub from a local map, reducing lookup overhead to <1ms.
+- **Resolution:** Implemented the `ServiceLocator` design pattern, which caches resolved EJB stubs in a local map to reduce lookup overhead to <1ms. During concurrent thread testing, the cache was refactored from `HashMap` to `ConcurrentHashMap` to resolve thread-safety issues and race conditions when multiple servlet request threads accessed and populated the cache concurrently.
 
 ---
 
@@ -179,6 +176,19 @@ To validate and defend the projected 99.9% uptime SLA under real-world runtime f
 *   **Scenario 2: MySQL Primary Database Node Fails**
     *   *System Response & Walkthrough:* If the primary MySQL database instance fails, the container orchestration runtime (e.g., Kubernetes or Docker Swarm) detects the failure. A secondary database replica is promoted to primary, and the application's connection pool references are dynamically updated.
     *   *SLA Calculation & Recovery Time:* Promoting a database replica and establishing connection pool stability takes approximately 30 seconds. A 99.9% uptime SLA allows for up to 43.8 minutes of downtime per month. Consequently, even if the primary database suffers one complete node crash per month, the 30-second failover window consumes a negligible fraction (less than 1.14%) of the monthly downtime budget, allowing the system to comfortably meet and defend its 99.9% availability commitment.
+
+## 7. Local Deployment Screenshots
+
+The following screenshots verify the successful local deployment and operation of the modernized TechMart E-Commerce Platform on the local Payara 6 application server:
+
+1. **User Authentication Interface (login.jsp):**
+   ![Login Page Screenshot](login_page.png)
+
+2. **Inventory Control Panel (products.jsp):**
+   ![Products Page Catalog Screenshot](products_page.png)
+
+3. **Performance Metrics Dashboard (dashboard.jsp):**
+   ![Performance Dashboard Metrics Screenshot](dashboard_page.png)
 
 ---
 

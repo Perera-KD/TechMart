@@ -1,0 +1,1650 @@
+2026-06-24 13:11:59,014 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-06-24 13:11:59,034 INFO o.a.j.JMeter: Loading user properties from: C:\Users\Kylie\Downloads\apache-jmeter-5.5\bin\user.properties
+2026-06-24 13:11:59,035 INFO o.a.j.JMeter: Loading system properties from: C:\Users\Kylie\Downloads\apache-jmeter-5.5\bin\system.properties
+2026-06-24 13:11:59,044 INFO o.a.j.JMeter: Copyright (c) 1998-2022 The Apache Software Foundation
+2026-06-24 13:11:59,044 INFO o.a.j.JMeter: Version 5.5
+2026-06-24 13:11:59,044 INFO o.a.j.JMeter: java.version=25.0.2
+2026-06-24 13:11:59,044 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2026-06-24 13:11:59,044 INFO o.a.j.JMeter: os.name=Windows 11
+2026-06-24 13:11:59,045 INFO o.a.j.JMeter: os.arch=amd64
+2026-06-24 13:11:59,045 INFO o.a.j.JMeter: os.version=10.0
+2026-06-24 13:11:59,045 INFO o.a.j.JMeter: file.encoding=UTF-8
+2026-06-24 13:11:59,045 INFO o.a.j.JMeter: java.awt.headless=true
+2026-06-24 13:11:59,045 INFO o.a.j.JMeter: Max memory     =1073741824
+2026-06-24 13:11:59,045 INFO o.a.j.JMeter: Available Processors =8
+2026-06-24 13:11:59,059 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-06-24 13:11:59,060 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-06-24 13:11:59,060 INFO o.a.j.JMeter: JMeterHome=C:\Users\Kylie\Downloads\apache-jmeter-5.5
+2026-06-24 13:11:59,060 INFO o.a.j.JMeter: user.dir  =C:\Users\Kylie\IdeaProjects\TechMart
+2026-06-24 13:11:59,060 INFO o.a.j.JMeter: PWD       =C:\Users\Kylie\IdeaProjects\TechMart
+2026-06-24 13:11:59,062 INFO o.a.j.JMeter: IP: 192.168.1.25 Name: DESKTOP-KYLIE FullName: DESKTOP-KYLIE
+2026-06-24 13:11:59,071 INFO o.a.j.s.FileServer: Default base='C:\Users\Kylie\IdeaProjects\TechMart'
+2026-06-24 13:11:59,072 INFO o.a.j.s.FileServer: Set new base='C:\Users\Kylie\IdeaProjects\TechMart'
+2026-06-24 13:11:59,366 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-06-24 13:11:59,390 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-06-24 13:11:59,394 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-06-24 13:11:59,398 INFO o.a.j.s.SaveService: Loading file: TechMart_Load_Test.jmx
+2026-06-24 13:11:59,432 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-06-24 13:11:59,432 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-06-24 13:11:59,432 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-06-24 13:11:59,432 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-06-24 13:11:59,433 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2026-06-24 13:11:59,433 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2026-06-24 13:11:59,452 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-06-24 13:11:59,463 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-06-24 13:11:59,464 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-06-24 13:11:59,464 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-06-24 13:11:59,470 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-06-24 13:11:59,470 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-06-24 13:11:59,521 INFO o.a.j.JMeter: Running test (1782286919521)
+2026-06-24 13:11:59,537 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Concurrent Users Simulation
+2026-06-24 13:11:59,537 INFO o.a.j.e.StandardJMeterEngine: Starting 500 threads for group Concurrent Users Simulation.
+2026-06-24 13:11:59,537 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-06-24 13:11:59,537 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=500 ramp-up=60 delayedStart=false
+2026-06-24 13:11:59,543 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-1
+2026-06-24 13:11:59,571 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = DESKTOP-KYLIE
+2026-06-24 13:11:59,586 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2026-06-24 13:11:59,588 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-06-24 13:11:59,588 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2026-06-24 13:11:59,588 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-06-24 13:11:59,589 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-06-24 13:11:59,660 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-2
+2026-06-24 13:11:59,688 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-06-24 13:11:59,688 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-06-24 13:11:59,780 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-3
+2026-06-24 13:11:59,900 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-4
+2026-06-24 13:12:00,020 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-5
+2026-06-24 13:12:00,140 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-6
+2026-06-24 13:12:00,260 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-7
+2026-06-24 13:12:00,380 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-8
+2026-06-24 13:12:00,499 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-9
+2026-06-24 13:12:00,621 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-10
+2026-06-24 13:12:00,737 INFO o.a.j.r.Summariser: summary +      1 in 00:00:01 =    0.8/s Avg:   831 Min:   831 Max:   831 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+2026-06-24 13:12:00,743 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-11
+2026-06-24 13:12:00,859 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-12
+2026-06-24 13:12:00,978 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-13
+2026-06-24 13:12:01,126 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-14
+2026-06-24 13:12:01,220 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-15
+2026-06-24 13:12:01,338 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-16
+2026-06-24 13:12:01,459 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-17
+2026-06-24 13:12:01,579 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-18
+2026-06-24 13:12:01,699 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-19
+2026-06-24 13:12:01,818 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-20
+2026-06-24 13:12:01,938 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-21
+2026-06-24 13:12:02,059 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-22
+2026-06-24 13:12:02,192 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-23
+2026-06-24 13:12:02,300 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-24
+2026-06-24 13:12:02,419 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-25
+2026-06-24 13:12:02,539 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-26
+2026-06-24 13:12:02,658 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-27
+2026-06-24 13:12:02,783 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-28
+2026-06-24 13:12:02,922 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-29
+2026-06-24 13:12:03,019 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-30
+2026-06-24 13:12:03,150 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-31
+2026-06-24 13:12:03,258 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-32
+2026-06-24 13:12:03,382 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-33
+2026-06-24 13:12:03,502 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-34
+2026-06-24 13:12:03,627 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-35
+2026-06-24 13:12:03,749 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-36
+2026-06-24 13:12:03,861 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-37
+2026-06-24 13:12:03,981 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-38
+2026-06-24 13:12:04,197 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-39
+2026-06-24 13:12:04,228 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-40
+2026-06-24 13:12:04,342 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-41
+2026-06-24 13:12:04,459 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-42
+2026-06-24 13:12:04,578 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-43
+2026-06-24 13:12:04,699 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-44
+2026-06-24 13:12:04,826 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-45
+2026-06-24 13:12:04,938 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-46
+2026-06-24 13:12:05,065 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-47
+2026-06-24 13:12:05,181 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-48
+2026-06-24 13:12:05,301 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-49
+2026-06-24 13:12:05,419 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-50
+2026-06-24 13:12:05,540 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-51
+2026-06-24 13:12:05,665 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-52
+2026-06-24 13:12:05,779 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-53
+2026-06-24 13:12:05,902 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-54
+2026-06-24 13:12:06,020 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-55
+2026-06-24 13:12:06,140 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-56
+2026-06-24 13:12:06,268 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-57
+2026-06-24 13:12:06,381 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-58
+2026-06-24 13:12:06,502 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-59
+2026-06-24 13:12:06,646 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-60
+2026-06-24 13:12:06,744 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-61
+2026-06-24 13:12:06,861 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-62
+2026-06-24 13:12:06,988 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-63
+2026-06-24 13:12:07,100 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-64
+2026-06-24 13:12:07,224 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-65
+2026-06-24 13:12:07,343 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-66
+2026-06-24 13:12:07,459 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-67
+2026-06-24 13:12:07,579 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-68
+2026-06-24 13:12:07,703 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-69
+2026-06-24 13:12:07,825 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-70
+2026-06-24 13:12:07,939 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-71
+2026-06-24 13:12:08,059 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-72
+2026-06-24 13:12:08,197 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-73
+2026-06-24 13:12:08,304 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-74
+2026-06-24 13:12:08,419 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-75
+2026-06-24 13:12:08,539 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-76
+2026-06-24 13:12:08,662 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-77
+2026-06-24 13:12:08,781 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-78
+2026-06-24 13:12:08,899 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-79
+2026-06-24 13:12:09,019 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-80
+2026-06-24 13:12:09,141 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-81
+2026-06-24 13:12:09,265 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-82
+2026-06-24 13:12:09,386 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-83
+2026-06-24 13:12:09,497 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-84
+2026-06-24 13:12:09,623 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-85
+2026-06-24 13:12:09,742 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-86
+2026-06-24 13:12:09,858 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-87
+2026-06-24 13:12:09,977 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-88
+2026-06-24 13:12:10,102 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-89
+2026-06-24 13:12:10,222 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-90
+2026-06-24 13:12:10,337 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-91
+2026-06-24 13:12:10,458 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-92
+2026-06-24 13:12:10,579 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-93
+2026-06-24 13:12:10,701 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-94
+2026-06-24 13:12:10,818 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-95
+2026-06-24 13:12:10,939 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-96
+2026-06-24 13:12:11,060 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-97
+2026-06-24 13:12:11,179 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-98
+2026-06-24 13:12:11,300 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-99
+2026-06-24 13:12:11,422 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-100
+2026-06-24 13:12:11,538 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-101
+2026-06-24 13:12:11,659 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-102
+2026-06-24 13:12:11,780 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-103
+2026-06-24 13:12:11,902 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-104
+2026-06-24 13:12:12,019 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-105
+2026-06-24 13:12:12,140 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-106
+2026-06-24 13:12:12,259 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-107
+2026-06-24 13:12:12,379 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-108
+2026-06-24 13:12:12,500 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-109
+2026-06-24 13:12:12,635 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-110
+2026-06-24 13:12:12,739 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-111
+2026-06-24 13:12:12,858 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-112
+2026-06-24 13:12:12,979 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-113
+2026-06-24 13:12:13,099 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-114
+2026-06-24 13:12:13,220 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-115
+2026-06-24 13:12:13,338 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-116
+2026-06-24 13:12:13,462 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-117
+2026-06-24 13:12:13,581 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-118
+2026-06-24 13:12:13,699 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-119
+2026-06-24 13:12:13,818 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-120
+2026-06-24 13:12:13,942 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-121
+2026-06-24 13:12:14,061 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-122
+2026-06-24 13:12:14,179 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-123
+2026-06-24 13:12:14,299 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-124
+2026-06-24 13:12:14,422 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-125
+2026-06-24 13:12:14,540 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-126
+2026-06-24 13:12:14,657 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-127
+2026-06-24 13:12:14,779 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-128
+2026-06-24 13:12:14,903 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-129
+2026-06-24 13:12:15,022 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-130
+2026-06-24 13:12:15,138 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-131
+2026-06-24 13:12:15,259 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-132
+2026-06-24 13:12:15,384 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-133
+2026-06-24 13:12:15,500 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-134
+2026-06-24 13:12:15,619 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-135
+2026-06-24 13:12:15,738 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-136
+2026-06-24 13:12:15,860 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-137
+2026-06-24 13:12:15,980 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-138
+2026-06-24 13:12:16,098 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-139
+2026-06-24 13:12:16,218 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-140
+2026-06-24 13:12:16,340 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-141
+2026-06-24 13:12:16,459 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-142
+2026-06-24 13:12:16,578 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-143
+2026-06-24 13:12:16,699 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-144
+2026-06-24 13:12:16,820 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-145
+2026-06-24 13:12:16,940 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-146
+2026-06-24 13:12:17,058 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-147
+2026-06-24 13:12:17,182 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-148
+2026-06-24 13:12:17,303 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-149
+2026-06-24 13:12:17,418 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-150
+2026-06-24 13:12:17,537 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-151
+2026-06-24 13:12:17,664 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-152
+2026-06-24 13:12:17,783 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-153
+2026-06-24 13:12:17,898 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-154
+2026-06-24 13:12:18,018 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-155
+2026-06-24 13:12:18,142 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-156
+2026-06-24 13:12:18,264 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-157
+2026-06-24 13:12:18,379 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-158
+2026-06-24 13:12:18,497 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-159
+2026-06-24 13:12:18,625 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-160
+2026-06-24 13:12:18,743 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-161
+2026-06-24 13:12:18,860 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-162
+2026-06-24 13:12:18,982 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-163
+2026-06-24 13:12:19,102 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-164
+2026-06-24 13:12:19,222 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-165
+2026-06-24 13:12:19,341 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-166
+2026-06-24 13:12:19,459 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-167
+2026-06-24 13:12:19,580 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-168
+2026-06-24 13:12:19,700 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-169
+2026-06-24 13:12:19,819 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-170
+2026-06-24 13:12:19,941 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-171
+2026-06-24 13:12:20,060 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-172
+2026-06-24 13:12:20,181 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-173
+2026-06-24 13:12:20,299 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-174
+2026-06-24 13:12:20,420 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-175
+2026-06-24 13:12:20,540 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-176
+2026-06-24 13:12:20,660 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-177
+2026-06-24 13:12:20,780 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-178
+2026-06-24 13:12:20,898 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-179
+2026-06-24 13:12:21,020 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-180
+2026-06-24 13:12:21,139 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-181
+2026-06-24 13:12:21,259 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-182
+2026-06-24 13:12:21,378 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-183
+2026-06-24 13:12:21,499 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-184
+2026-06-24 13:12:21,618 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-185
+2026-06-24 13:12:21,737 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-186
+2026-06-24 13:12:21,858 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-187
+2026-06-24 13:12:21,978 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-188
+2026-06-24 13:12:22,098 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-189
+2026-06-24 13:12:22,217 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-190
+2026-06-24 13:12:22,337 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-191
+2026-06-24 13:12:22,459 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-192
+2026-06-24 13:12:22,577 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-193
+2026-06-24 13:12:22,697 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-194
+2026-06-24 13:12:22,819 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-195
+2026-06-24 13:12:22,940 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-196
+2026-06-24 13:12:23,060 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-197
+2026-06-24 13:12:23,177 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-198
+2026-06-24 13:12:23,299 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-199
+2026-06-24 13:12:23,418 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-200
+2026-06-24 13:12:23,538 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-201
+2026-06-24 13:12:23,657 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-202
+2026-06-24 13:12:23,778 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-203
+2026-06-24 13:12:23,899 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-204
+2026-06-24 13:12:24,018 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-205
+2026-06-24 13:12:24,138 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-206
+2026-06-24 13:12:24,259 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-207
+2026-06-24 13:12:24,381 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-208
+2026-06-24 13:12:24,499 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-209
+2026-06-24 13:12:24,619 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-210
+2026-06-24 13:12:24,738 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-211
+2026-06-24 13:12:24,859 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-212
+2026-06-24 13:12:24,979 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-213
+2026-06-24 13:12:25,097 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-214
+2026-06-24 13:12:25,220 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-215
+2026-06-24 13:12:25,338 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-216
+2026-06-24 13:12:25,459 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-217
+2026-06-24 13:12:25,577 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-218
+2026-06-24 13:12:25,698 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-219
+2026-06-24 13:12:25,818 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-220
+2026-06-24 13:12:25,938 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-221
+2026-06-24 13:12:26,058 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-222
+2026-06-24 13:12:26,179 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-223
+2026-06-24 13:12:26,299 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-224
+2026-06-24 13:12:26,421 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-225
+2026-06-24 13:12:26,541 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-226
+2026-06-24 13:12:26,660 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-227
+2026-06-24 13:12:26,778 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-228
+2026-06-24 13:12:26,899 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-229
+2026-06-24 13:12:27,022 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-230
+2026-06-24 13:12:27,143 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-231
+2026-06-24 13:12:27,259 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-232
+2026-06-24 13:12:27,380 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-233
+2026-06-24 13:12:27,501 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-234
+2026-06-24 13:12:27,622 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-235
+2026-06-24 13:12:27,749 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-236
+2026-06-24 13:12:27,874 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-237
+2026-06-24 13:12:27,980 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-238
+2026-06-24 13:12:28,102 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-239
+2026-06-24 13:12:28,231 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-240
+2026-06-24 13:12:28,351 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-241
+2026-06-24 13:12:28,462 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-242
+2026-06-24 13:12:28,585 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-243
+2026-06-24 13:12:28,730 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-244
+2026-06-24 13:12:28,831 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-245
+2026-06-24 13:12:28,942 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-246
+2026-06-24 13:12:29,062 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-247
+2026-06-24 13:12:29,190 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-248
+2026-06-24 13:12:29,311 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-249
+2026-06-24 13:12:29,424 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-250
+2026-06-24 13:12:29,541 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-251
+2026-06-24 13:12:29,685 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-252
+2026-06-24 13:12:29,805 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-253
+2026-06-24 13:12:29,899 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-254
+2026-06-24 13:12:30,001 INFO o.a.j.r.Summariser: summary +   2163 in 00:00:29 =   73.9/s Avg:  1494 Min:   107 Max:  5421 Err:     0 (0.00%) Active: 254 Started: 254 Finished: 0
+2026-06-24 13:12:30,001 INFO o.a.j.r.Summariser: summary =   2164 in 00:00:30 =   71.0/s Avg:  1494 Min:   107 Max:  5421 Err:     0 (0.00%)
+2026-06-24 13:12:30,018 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-255
+2026-06-24 13:12:30,164 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-256
+2026-06-24 13:12:30,284 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-257
+2026-06-24 13:12:30,379 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-258
+2026-06-24 13:12:30,499 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-259
+2026-06-24 13:12:30,645 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-260
+2026-06-24 13:12:30,765 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-261
+2026-06-24 13:12:30,859 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-262
+2026-06-24 13:12:30,979 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-263
+2026-06-24 13:12:31,124 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-264
+2026-06-24 13:12:31,244 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-265
+2026-06-24 13:12:31,341 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-266
+2026-06-24 13:12:31,461 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-267
+2026-06-24 13:12:31,603 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-268
+2026-06-24 13:12:31,722 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-269
+2026-06-24 13:12:31,821 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-270
+2026-06-24 13:12:31,942 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-271
+2026-06-24 13:12:32,083 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-272
+2026-06-24 13:12:32,203 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-273
+2026-06-24 13:12:32,299 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-274
+2026-06-24 13:12:32,419 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-275
+2026-06-24 13:12:32,562 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-276
+2026-06-24 13:12:32,681 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-277
+2026-06-24 13:12:32,781 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-278
+2026-06-24 13:12:32,901 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-279
+2026-06-24 13:12:33,040 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-280
+2026-06-24 13:12:33,160 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-281
+2026-06-24 13:12:33,261 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-282
+2026-06-24 13:12:33,380 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-283
+2026-06-24 13:12:33,520 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-284
+2026-06-24 13:12:33,639 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-285
+2026-06-24 13:12:33,739 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-286
+2026-06-24 13:12:33,857 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-287
+2026-06-24 13:12:33,998 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-288
+2026-06-24 13:12:34,118 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-289
+2026-06-24 13:12:34,221 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-290
+2026-06-24 13:12:34,339 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-291
+2026-06-24 13:12:34,477 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-292
+2026-06-24 13:12:34,597 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-293
+2026-06-24 13:12:34,699 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-294
+2026-06-24 13:12:34,828 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-295
+2026-06-24 13:12:34,957 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-296
+2026-06-24 13:12:35,077 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-297
+2026-06-24 13:12:35,187 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-298
+2026-06-24 13:12:35,308 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-299
+2026-06-24 13:12:35,436 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-300
+2026-06-24 13:12:35,556 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-301
+2026-06-24 13:12:35,667 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-302
+2026-06-24 13:12:35,778 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-303
+2026-06-24 13:12:35,907 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-304
+2026-06-24 13:12:36,027 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-305
+2026-06-24 13:12:36,159 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-306
+2026-06-24 13:12:36,260 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-307
+2026-06-24 13:12:36,394 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-308
+2026-06-24 13:12:36,511 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-309
+2026-06-24 13:12:36,618 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-310
+2026-06-24 13:12:36,741 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-311
+2026-06-24 13:12:36,871 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-312
+2026-06-24 13:12:36,992 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-313
+2026-06-24 13:12:37,103 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-314
+2026-06-24 13:12:37,221 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-315
+2026-06-24 13:12:37,343 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-316
+2026-06-24 13:12:37,469 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-317
+2026-06-24 13:12:37,579 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-318
+2026-06-24 13:12:37,698 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-319
+2026-06-24 13:12:37,823 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-320
+2026-06-24 13:12:37,944 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-321
+2026-06-24 13:12:38,060 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-322
+2026-06-24 13:12:38,180 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-323
+2026-06-24 13:12:38,302 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-324
+2026-06-24 13:12:38,422 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-325
+2026-06-24 13:12:38,539 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-326
+2026-06-24 13:12:38,658 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-327
+2026-06-24 13:12:38,783 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-328
+2026-06-24 13:12:38,906 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-329
+2026-06-24 13:12:39,018 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-330
+2026-06-24 13:12:39,137 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-331
+2026-06-24 13:12:39,264 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-332
+2026-06-24 13:12:39,382 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-333
+2026-06-24 13:12:39,499 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-334
+2026-06-24 13:12:39,619 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-335
+2026-06-24 13:12:39,742 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-336
+2026-06-24 13:12:39,865 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-337
+2026-06-24 13:12:39,978 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-338
+2026-06-24 13:12:40,098 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-339
+2026-06-24 13:12:40,223 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-340
+2026-06-24 13:12:40,339 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-341
+2026-06-24 13:12:40,458 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-342
+2026-06-24 13:12:40,577 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-343
+2026-06-24 13:12:40,704 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-344
+2026-06-24 13:12:40,828 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-345
+2026-06-24 13:12:40,938 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-346
+2026-06-24 13:12:41,063 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-347
+2026-06-24 13:12:41,187 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-348
+2026-06-24 13:12:41,303 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-349
+2026-06-24 13:12:41,417 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-350
+2026-06-24 13:12:41,543 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-351
+2026-06-24 13:12:41,663 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-352
+2026-06-24 13:12:41,782 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-353
+2026-06-24 13:12:41,899 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-354
+2026-06-24 13:12:42,023 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-355
+2026-06-24 13:12:42,142 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-356
+2026-06-24 13:12:42,262 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-357
+2026-06-24 13:12:42,383 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-358
+2026-06-24 13:12:42,503 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-359
+2026-06-24 13:12:42,622 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-360
+2026-06-24 13:12:42,741 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-361
+2026-06-24 13:12:42,862 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-362
+2026-06-24 13:12:42,982 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-363
+2026-06-24 13:12:43,101 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-364
+2026-06-24 13:12:43,221 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-365
+2026-06-24 13:12:43,339 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-366
+2026-06-24 13:12:43,460 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-367
+2026-06-24 13:12:43,581 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-368
+2026-06-24 13:12:43,703 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-369
+2026-06-24 13:12:43,817 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-370
+2026-06-24 13:12:43,937 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-371
+2026-06-24 13:12:44,069 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-372
+2026-06-24 13:12:44,183 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-373
+2026-06-24 13:12:44,302 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-374
+2026-06-24 13:12:44,425 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-375
+2026-06-24 13:12:44,543 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-376
+2026-06-24 13:12:44,671 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-377
+2026-06-24 13:12:44,783 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-378
+2026-06-24 13:12:44,899 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-379
+2026-06-24 13:12:45,031 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-380
+2026-06-24 13:12:45,152 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-381
+2026-06-24 13:12:45,263 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-382
+2026-06-24 13:12:45,382 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-383
+2026-06-24 13:12:45,510 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-384
+2026-06-24 13:12:45,629 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-385
+2026-06-24 13:12:45,742 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-386
+2026-06-24 13:12:45,862 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-387
+2026-06-24 13:12:45,988 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-388
+2026-06-24 13:12:46,109 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-389
+2026-06-24 13:12:46,219 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-390
+2026-06-24 13:12:46,342 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-391
+2026-06-24 13:12:46,468 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-392
+2026-06-24 13:12:46,589 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-393
+2026-06-24 13:12:46,702 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-394
+2026-06-24 13:12:46,821 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-395
+2026-06-24 13:12:46,947 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-396
+2026-06-24 13:12:47,067 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-397
+2026-06-24 13:12:47,181 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-398
+2026-06-24 13:12:47,301 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-399
+2026-06-24 13:12:47,431 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-400
+2026-06-24 13:12:47,547 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-401
+2026-06-24 13:12:47,660 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-402
+2026-06-24 13:12:47,779 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-403
+2026-06-24 13:12:47,906 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-404
+2026-06-24 13:12:48,027 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-405
+2026-06-24 13:12:48,140 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-406
+2026-06-24 13:12:48,261 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-407
+2026-06-24 13:12:48,386 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-408
+2026-06-24 13:12:48,507 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-409
+2026-06-24 13:12:48,619 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-410
+2026-06-24 13:12:48,741 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-411
+2026-06-24 13:12:48,866 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-412
+2026-06-24 13:12:48,986 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-413
+2026-06-24 13:12:49,099 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-414
+2026-06-24 13:12:49,220 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-415
+2026-06-24 13:12:49,345 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-416
+2026-06-24 13:12:49,465 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-417
+2026-06-24 13:12:49,580 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-418
+2026-06-24 13:12:49,700 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-419
+2026-06-24 13:12:49,825 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-420
+2026-06-24 13:12:49,945 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-421
+2026-06-24 13:12:50,059 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-422
+2026-06-24 13:12:50,180 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-423
+2026-06-24 13:12:50,305 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-424
+2026-06-24 13:12:50,425 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-425
+2026-06-24 13:12:50,539 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-426
+2026-06-24 13:12:50,658 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-427
+2026-06-24 13:12:50,784 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-428
+2026-06-24 13:12:50,907 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-429
+2026-06-24 13:12:51,018 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-430
+2026-06-24 13:12:51,138 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-431
+2026-06-24 13:12:51,263 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-432
+2026-06-24 13:12:51,385 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-433
+2026-06-24 13:12:51,499 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-434
+2026-06-24 13:12:51,618 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-435
+2026-06-24 13:12:51,743 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-436
+2026-06-24 13:12:51,864 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-437
+2026-06-24 13:12:51,978 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-438
+2026-06-24 13:12:52,098 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-439
+2026-06-24 13:12:52,223 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-440
+2026-06-24 13:12:52,343 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-441
+2026-06-24 13:12:52,460 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-442
+2026-06-24 13:12:52,580 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-443
+2026-06-24 13:12:52,703 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-444
+2026-06-24 13:12:52,823 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-445
+2026-06-24 13:12:52,942 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-446
+2026-06-24 13:12:53,063 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-447
+2026-06-24 13:12:53,183 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-448
+2026-06-24 13:12:53,303 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-449
+2026-06-24 13:12:53,423 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-450
+2026-06-24 13:12:53,543 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-451
+2026-06-24 13:12:53,658 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-452
+2026-06-24 13:12:53,782 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-453
+2026-06-24 13:12:53,902 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-454
+2026-06-24 13:12:54,023 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-455
+2026-06-24 13:12:54,143 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-456
+2026-06-24 13:12:54,263 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-457
+2026-06-24 13:12:54,384 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-458
+2026-06-24 13:12:54,504 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-459
+2026-06-24 13:12:54,622 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-460
+2026-06-24 13:12:54,742 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-461
+2026-06-24 13:12:54,862 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-462
+2026-06-24 13:12:54,982 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-463
+2026-06-24 13:12:55,102 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-464
+2026-06-24 13:12:55,221 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-465
+2026-06-24 13:12:55,341 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-466
+2026-06-24 13:12:55,457 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-467
+2026-06-24 13:12:55,583 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-468
+2026-06-24 13:12:55,702 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-469
+2026-06-24 13:12:55,821 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-470
+2026-06-24 13:12:55,941 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-471
+2026-06-24 13:12:56,062 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-472
+2026-06-24 13:12:56,181 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-473
+2026-06-24 13:12:56,302 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-474
+2026-06-24 13:12:56,420 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-475
+2026-06-24 13:12:56,540 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-476
+2026-06-24 13:12:56,660 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-477
+2026-06-24 13:12:56,781 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-478
+2026-06-24 13:12:56,902 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-479
+2026-06-24 13:12:57,020 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-480
+2026-06-24 13:12:57,140 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-481
+2026-06-24 13:12:57,270 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-482
+2026-06-24 13:12:57,380 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-483
+2026-06-24 13:12:57,500 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-484
+2026-06-24 13:12:57,620 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-485
+2026-06-24 13:12:57,739 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-486
+2026-06-24 13:12:57,860 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-487
+2026-06-24 13:12:57,982 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-488
+2026-06-24 13:12:58,102 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-489
+2026-06-24 13:12:58,223 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-490
+2026-06-24 13:12:58,344 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-491
+2026-06-24 13:12:58,464 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-492
+2026-06-24 13:12:58,585 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-493
+2026-06-24 13:12:58,705 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-494
+2026-06-24 13:12:58,824 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-495
+2026-06-24 13:12:58,940 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-496
+2026-06-24 13:12:59,060 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-497
+2026-06-24 13:12:59,182 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-498
+2026-06-24 13:12:59,302 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-499
+2026-06-24 13:12:59,420 INFO o.a.j.t.JMeterThread: Thread started: Concurrent Users Simulation 1-500
+2026-06-24 13:13:00,015 INFO o.a.j.r.Summariser: summary +   1125 in 00:00:30 =   37.5/s Avg:  7408 Min:  2780 Max: 15747 Err:     0 (0.00%) Active: 500 Started: 500 Finished: 0
+2026-06-24 13:13:00,016 INFO o.a.j.r.Summariser: summary =   3289 in 00:01:00 =   54.4/s Avg:  3517 Min:   107 Max: 15747 Err:     0 (0.00%)
+2026-06-24 13:13:30,041 INFO o.a.j.r.Summariser: summary +    852 in 00:00:30 =   28.4/s Avg: 15648 Min:  9194 Max: 23512 Err:     0 (0.00%) Active: 500 Started: 500 Finished: 0
+2026-06-24 13:13:30,041 INFO o.a.j.r.Summariser: summary =   4141 in 00:01:31 =   45.7/s Avg:  6013 Min:   107 Max: 23512 Err:     0 (0.00%)
+2026-06-24 13:14:00,055 INFO o.a.j.r.Summariser: summary +    761 in 00:00:30 =   25.4/s Avg: 17970 Min: 11373 Max: 26044 Err:     0 (0.00%) Active: 500 Started: 500 Finished: 0
+2026-06-24 13:14:00,056 INFO o.a.j.r.Summariser: summary =   4902 in 00:02:01 =   40.7/s Avg:  7869 Min:   107 Max: 26044 Err:     0 (0.00%)
+2026-06-24 13:14:30,015 INFO o.a.j.r.Summariser: summary +    732 in 00:00:30 =   24.4/s Avg: 20618 Min: 12986 Max: 28376 Err:     0 (0.00%) Active: 500 Started: 500 Finished: 0
+2026-06-24 13:14:30,016 INFO o.a.j.r.Summariser: summary =   5634 in 00:02:30 =   37.4/s Avg:  9525 Min:   107 Max: 28376 Err:     0 (0.00%)
+2026-06-24 13:15:00,017 INFO o.a.j.r.Summariser: summary +    600 in 00:00:30 =   20.0/s Avg: 24384 Min: 15191 Max: 32666 Err:     0 (0.00%) Active: 500 Started: 500 Finished: 0
+2026-06-24 13:15:00,017 INFO o.a.j.r.Summariser: summary =   6234 in 00:03:00 =   34.5/s Avg: 10956 Min:   107 Max: 32666 Err:     0 (0.00%)
+2026-06-24 13:15:30,019 INFO o.a.j.r.Summariser: summary +    552 in 00:00:30 =   18.4/s Avg: 24087 Min: 15812 Max: 34908 Err:     0 (0.00%) Active: 500 Started: 500 Finished: 0
+2026-06-24 13:15:30,020 INFO o.a.j.r.Summariser: summary =   6786 in 00:03:30 =   32.2/s Avg: 12024 Min:   107 Max: 34908 Err:     0 (0.00%)
+2026-06-24 13:15:59,359 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-3
+2026-06-24 13:15:59,359 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-3
+2026-06-24 13:15:59,522 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-4
+2026-06-24 13:15:59,522 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-4
+2026-06-24 13:16:00,044 INFO o.a.j.r.Summariser: summary +    555 in 00:00:30 =   18.5/s Avg: 28055 Min: 17260 Max: 37357 Err:     0 (0.00%) Active: 498 Started: 500 Finished: 2
+2026-06-24 13:16:00,044 INFO o.a.j.r.Summariser: summary =   7341 in 00:04:01 =   30.5/s Avg: 13236 Min:   107 Max: 37357 Err:     0 (0.00%)
+2026-06-24 13:16:01,678 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-2
+2026-06-24 13:16:01,679 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-2
+2026-06-24 13:16:02,714 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-1
+2026-06-24 13:16:02,714 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-1
+2026-06-24 13:16:03,613 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-7
+2026-06-24 13:16:03,613 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-7
+2026-06-24 13:16:08,910 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-5
+2026-06-24 13:16:08,910 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-5
+2026-06-24 13:16:13,409 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-6
+2026-06-24 13:16:13,409 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-6
+2026-06-24 13:16:13,618 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-9
+2026-06-24 13:16:13,618 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-9
+2026-06-24 13:16:14,082 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-8
+2026-06-24 13:16:14,082 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-8
+2026-06-24 13:16:25,541 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-11
+2026-06-24 13:16:25,541 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-11
+2026-06-24 13:16:28,884 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-12
+2026-06-24 13:16:28,884 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-12
+2026-06-24 13:16:30,048 INFO o.a.j.r.Summariser: summary +    466 in 00:00:30 =   15.5/s Avg: 27655 Min: 18173 Max: 39795 Err:     0 (0.00%) Active: 489 Started: 500 Finished: 11
+2026-06-24 13:16:30,048 INFO o.a.j.r.Summariser: summary =   7807 in 00:04:31 =   28.9/s Avg: 14096 Min:   107 Max: 39795 Err:     0 (0.00%)
+2026-06-24 13:16:40,813 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-13
+2026-06-24 13:16:40,813 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-13
+2026-06-24 13:16:47,174 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-14
+2026-06-24 13:16:47,174 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-14
+2026-06-24 13:16:56,535 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-18
+2026-06-24 13:16:56,535 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-18
+2026-06-24 13:16:56,583 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-19
+2026-06-24 13:16:56,583 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-19
+2026-06-24 13:16:57,054 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-15
+2026-06-24 13:16:57,055 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-15
+2026-06-24 13:16:58,004 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-17
+2026-06-24 13:16:58,004 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-17
+2026-06-24 13:16:59,023 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-21
+2026-06-24 13:16:59,023 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-21
+2026-06-24 13:16:59,819 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-22
+2026-06-24 13:16:59,819 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-22
+2026-06-24 13:17:00,195 INFO o.a.j.r.Summariser: summary +    516 in 00:00:30 =   17.1/s Avg: 31129 Min: 18751 Max: 40889 Err:     0 (0.00%) Active: 481 Started: 500 Finished: 19
+2026-06-24 13:17:00,197 INFO o.a.j.r.Summariser: summary =   8323 in 00:05:01 =   27.7/s Avg: 15152 Min:   107 Max: 40889 Err:     0 (0.00%)
+2026-06-24 13:17:09,886 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-20
+2026-06-24 13:17:09,886 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-20
+2026-06-24 13:17:15,000 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-23
+2026-06-24 13:17:15,000 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-23
+2026-06-24 13:17:30,008 INFO o.a.j.r.Summariser: summary +    415 in 00:00:30 =   13.9/s Avg: 29664 Min: 19299 Max: 42653 Err:     0 (0.00%) Active: 479 Started: 500 Finished: 21
+2026-06-24 13:17:30,008 INFO o.a.j.r.Summariser: summary =   8738 in 00:05:30 =   26.4/s Avg: 15842 Min:   107 Max: 42653 Err:     0 (0.00%)
+2026-06-24 13:17:37,833 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-24
+2026-06-24 13:17:37,833 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-24
+2026-06-24 13:17:39,491 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-25
+2026-06-24 13:17:39,491 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-25
+2026-06-24 13:17:55,175 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-26
+2026-06-24 13:17:55,176 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-26
+2026-06-24 13:18:00,112 INFO o.a.j.r.Summariser: summary +    459 in 00:00:30 =   15.2/s Avg: 34417 Min: 20401 Max: 44683 Err:     0 (0.00%) Active: 476 Started: 500 Finished: 24
+2026-06-24 13:18:00,112 INFO o.a.j.r.Summariser: summary =   9197 in 00:06:01 =   25.5/s Avg: 16769 Min:   107 Max: 44683 Err:     0 (0.00%)
+2026-06-24 13:18:19,756 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-28
+2026-06-24 13:18:19,756 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-28
+2026-06-24 13:18:30,051 INFO o.a.j.r.Summariser: summary +    409 in 00:00:30 =   13.7/s Avg: 31209 Min: 20810 Max: 44754 Err:     0 (0.00%) Active: 475 Started: 500 Finished: 25
+2026-06-24 13:18:30,051 INFO o.a.j.r.Summariser: summary =   9606 in 00:06:31 =   24.6/s Avg: 17384 Min:   107 Max: 44754 Err:     0 (0.00%)
+2026-06-24 13:18:32,704 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-29
+2026-06-24 13:18:32,704 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-29
+2026-06-24 13:18:37,461 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-30
+2026-06-24 13:18:37,461 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-30
+2026-06-24 13:18:52,816 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-31
+2026-06-24 13:18:52,816 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-31
+2026-06-24 13:19:00,028 INFO o.a.j.r.Summariser: summary +    391 in 00:00:30 =   13.0/s Avg: 36269 Min: 23057 Max: 47128 Err:     0 (0.00%) Active: 472 Started: 500 Finished: 28
+2026-06-24 13:19:00,028 INFO o.a.j.r.Summariser: summary =   9997 in 00:07:01 =   23.8/s Avg: 18122 Min:   107 Max: 47128 Err:     0 (0.00%)
+2026-06-24 13:19:02,713 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-32
+2026-06-24 13:19:02,713 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-32
+2026-06-24 13:19:18,565 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-33
+2026-06-24 13:19:18,565 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-33
+2026-06-24 13:19:30,054 INFO o.a.j.r.Summariser: summary +    427 in 00:00:30 =   14.2/s Avg: 33395 Min: 21743 Max: 46992 Err:     0 (0.00%) Active: 470 Started: 500 Finished: 30
+2026-06-24 13:19:30,054 INFO o.a.j.r.Summariser: summary =  10424 in 00:07:31 =   23.1/s Avg: 18748 Min:   107 Max: 47128 Err:     0 (0.00%)
+2026-06-24 13:19:30,355 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-34
+2026-06-24 13:19:30,355 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-34
+2026-06-24 13:19:46,808 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-35
+2026-06-24 13:19:46,808 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-35
+2026-06-24 13:20:00,126 INFO o.a.j.r.Summariser: summary +    300 in 00:00:30 =   10.0/s Avg: 37582 Min: 23338 Max: 51559 Err:     0 (0.00%) Active: 468 Started: 500 Finished: 32
+2026-06-24 13:20:00,126 INFO o.a.j.r.Summariser: summary =  10724 in 00:08:01 =   22.3/s Avg: 19275 Min:   107 Max: 51559 Err:     0 (0.00%)
+2026-06-24 13:20:02,306 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-36
+2026-06-24 13:20:02,306 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-36
+2026-06-24 13:20:09,340 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-37
+2026-06-24 13:20:09,340 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-37
+2026-06-24 13:20:25,278 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-38
+2026-06-24 13:20:25,278 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-38
+2026-06-24 13:20:30,139 INFO o.a.j.r.Summariser: summary +    388 in 00:00:30 =   12.9/s Avg: 41245 Min: 25104 Max: 53775 Err:     0 (0.00%) Active: 465 Started: 500 Finished: 35
+2026-06-24 13:20:30,139 INFO o.a.j.r.Summariser: summary =  11112 in 00:08:31 =   21.8/s Avg: 20042 Min:   107 Max: 53775 Err:     0 (0.00%)
+2026-06-24 13:20:45,145 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-40
+2026-06-24 13:20:45,145 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-40
+2026-06-24 13:20:45,221 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-39
+2026-06-24 13:20:45,221 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-39
+2026-06-24 13:21:00,150 INFO o.a.j.r.Summariser: summary +    326 in 00:00:30 =   10.9/s Avg: 37743 Min: 25190 Max: 53872 Err:     0 (0.00%) Active: 463 Started: 500 Finished: 37
+2026-06-24 13:21:00,151 INFO o.a.j.r.Summariser: summary =  11438 in 00:09:01 =   21.2/s Avg: 20546 Min:   107 Max: 53872 Err:     0 (0.00%)
+2026-06-24 13:21:04,855 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-41
+2026-06-24 13:21:04,856 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-41
+2026-06-24 13:21:10,493 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-42
+2026-06-24 13:21:10,493 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-42
+2026-06-24 13:21:26,890 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-43
+2026-06-24 13:21:26,890 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-43
+2026-06-24 13:21:30,144 INFO o.a.j.r.Summariser: summary +    314 in 00:00:30 =   10.5/s Avg: 43555 Min: 28036 Max: 57174 Err:    11 (3.50%) Active: 460 Started: 500 Finished: 40
+2026-06-24 13:21:30,144 INFO o.a.j.r.Summariser: summary =  11752 in 00:09:31 =   20.6/s Avg: 21161 Min:   107 Max: 57174 Err:    11 (0.09%)
+2026-06-24 13:21:41,029 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-44
+2026-06-24 13:21:41,029 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-44
+2026-06-24 13:21:45,509 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-45
+2026-06-24 13:21:45,509 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-45
+2026-06-24 13:21:58,956 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-46
+2026-06-24 13:21:58,957 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-46
+2026-06-24 13:22:00,226 INFO o.a.j.r.Summariser: summary +    361 in 00:00:30 =   12.0/s Avg: 41432 Min: 25942 Max: 57227 Err:     0 (0.00%) Active: 457 Started: 500 Finished: 43
+2026-06-24 13:22:00,227 INFO o.a.j.r.Summariser: summary =  12113 in 00:10:01 =   20.2/s Avg: 21765 Min:   107 Max: 57227 Err:    11 (0.09%)
+2026-06-24 13:22:20,190 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-47
+2026-06-24 13:22:20,191 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-47
+2026-06-24 13:22:28,275 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-48
+2026-06-24 13:22:28,276 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-48
+2026-06-24 13:22:30,050 INFO o.a.j.r.Summariser: summary +    301 in 00:00:30 =   10.1/s Avg: 39581 Min: 25695 Max: 55383 Err:     0 (0.00%) Active: 455 Started: 500 Finished: 45
+2026-06-24 13:22:30,050 INFO o.a.j.r.Summariser: summary =  12414 in 00:10:31 =   19.7/s Avg: 22197 Min:   107 Max: 57227 Err:    11 (0.09%)
+2026-06-24 13:22:46,836 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-49
+2026-06-24 13:22:46,836 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-49
+2026-06-24 13:22:59,506 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-50
+2026-06-24 13:22:59,506 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-50
+2026-06-24 13:23:00,062 INFO o.a.j.r.Summariser: summary +    329 in 00:00:30 =   11.0/s Avg: 44187 Min: 27247 Max: 57003 Err:     8 (2.43%) Active: 453 Started: 500 Finished: 47
+2026-06-24 13:23:00,062 INFO o.a.j.r.Summariser: summary =  12743 in 00:11:01 =   19.3/s Avg: 22765 Min:   107 Max: 57227 Err:    19 (0.15%)
+2026-06-24 13:23:07,617 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-51
+2026-06-24 13:23:07,617 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-51
+2026-06-24 13:23:28,935 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-53
+2026-06-24 13:23:28,935 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-53
+2026-06-24 13:23:30,021 INFO o.a.j.r.Summariser: summary +    372 in 00:00:30 =   12.4/s Avg: 38778 Min: 25336 Max: 56710 Err:     0 (0.00%) Active: 451 Started: 500 Finished: 49
+2026-06-24 13:23:30,021 INFO o.a.j.r.Summariser: summary =  13115 in 00:11:30 =   19.0/s Avg: 23219 Min:   107 Max: 57227 Err:    19 (0.14%)
+2026-06-24 13:23:44,206 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-54
+2026-06-24 13:23:44,206 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-54
+2026-06-24 13:23:55,247 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-55
+2026-06-24 13:23:55,247 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-55
+2026-06-24 13:24:00,107 INFO o.a.j.r.Summariser: summary +    269 in 00:00:30 =    8.9/s Avg: 40823 Min: 25535 Max: 55838 Err:    15 (5.58%) Active: 449 Started: 500 Finished: 51
+2026-06-24 13:24:00,107 INFO o.a.j.r.Summariser: summary =  13384 in 00:12:01 =   18.6/s Avg: 23573 Min:   107 Max: 57227 Err:    34 (0.25%)
+2026-06-24 13:24:05,782 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-56
+2026-06-24 13:24:05,783 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-56
+2026-06-24 13:24:08,732 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-57
+2026-06-24 13:24:08,732 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-57
+2026-06-24 13:24:15,642 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-58
+2026-06-24 13:24:15,642 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-58
+2026-06-24 13:24:22,525 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-59
+2026-06-24 13:24:22,525 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-59
+2026-06-24 13:24:28,222 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-60
+2026-06-24 13:24:28,222 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-60
+2026-06-24 13:24:30,148 INFO o.a.j.r.Summariser: summary +    327 in 00:00:30 =   10.9/s Avg: 45330 Min: 28801 Max: 59838 Err:    25 (7.65%) Active: 444 Started: 500 Finished: 56
+2026-06-24 13:24:30,148 INFO o.a.j.r.Summariser: summary =  13711 in 00:12:31 =   18.3/s Avg: 24092 Min:   107 Max: 59838 Err:    59 (0.43%)
+2026-06-24 13:24:30,644 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-61
+2026-06-24 13:24:30,644 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-61
+2026-06-24 13:24:42,116 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-62
+2026-06-24 13:24:42,116 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-62
+2026-06-24 13:24:50,675 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-63
+2026-06-24 13:24:50,675 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-63
+2026-06-24 13:24:58,197 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-64
+2026-06-24 13:24:58,197 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-64
+2026-06-24 13:25:00,344 INFO o.a.j.r.Summariser: summary +    319 in 00:00:30 =   10.6/s Avg: 40302 Min: 26790 Max: 59252 Err:     0 (0.00%) Active: 440 Started: 500 Finished: 60
+2026-06-24 13:25:00,344 INFO o.a.j.r.Summariser: summary =  14030 in 00:13:01 =   18.0/s Avg: 24460 Min:   107 Max: 59838 Err:    59 (0.42%)
+2026-06-24 13:25:06,958 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-65
+2026-06-24 13:25:06,958 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-65
+2026-06-24 13:25:15,319 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-66
+2026-06-24 13:25:15,320 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-66
+2026-06-24 13:25:21,636 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-67
+2026-06-24 13:25:21,636 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-67
+2026-06-24 13:25:30,137 INFO o.a.j.r.Summariser: summary +    273 in 00:00:30 =    9.2/s Avg: 44599 Min: 28128 Max: 57985 Err:    17 (6.23%) Active: 437 Started: 500 Finished: 63
+2026-06-24 13:25:30,137 INFO o.a.j.r.Summariser: summary =  14303 in 00:13:31 =   17.6/s Avg: 24845 Min:   107 Max: 59838 Err:    76 (0.53%)
+2026-06-24 13:25:31,716 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-68
+2026-06-24 13:25:31,716 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-68
+2026-06-24 13:25:38,968 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-69
+2026-06-24 13:25:38,969 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-69
+2026-06-24 13:25:39,250 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-73
+2026-06-24 13:25:39,250 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-73
+2026-06-24 13:25:44,791 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-70
+2026-06-24 13:25:44,791 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-70
+2026-06-24 13:25:51,284 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-71
+2026-06-24 13:25:51,284 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-71
+2026-06-24 13:25:58,308 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-72
+2026-06-24 13:25:58,308 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-72
+2026-06-24 13:26:00,038 INFO o.a.j.r.Summariser: summary +    345 in 00:00:30 =   11.5/s Avg: 44040 Min: 26919 Max: 58748 Err:     0 (0.00%) Active: 431 Started: 500 Finished: 69
+2026-06-24 13:26:00,039 INFO o.a.j.r.Summariser: summary =  14648 in 00:14:01 =   17.4/s Avg: 25297 Min:   107 Max: 59838 Err:    76 (0.52%)
+2026-06-24 13:26:11,438 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-74
+2026-06-24 13:26:11,438 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-74
+2026-06-24 13:26:18,671 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-75
+2026-06-24 13:26:18,671 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-75
+2026-06-24 13:26:27,221 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-76
+2026-06-24 13:26:27,221 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-76
+2026-06-24 13:26:30,248 INFO o.a.j.r.Summariser: summary +    283 in 00:00:30 =    9.4/s Avg: 39355 Min: 26465 Max: 56655 Err:     0 (0.00%) Active: 428 Started: 500 Finished: 72
+2026-06-24 13:26:30,248 INFO o.a.j.r.Summariser: summary =  14931 in 00:14:31 =   17.1/s Avg: 25563 Min:   107 Max: 59838 Err:    76 (0.51%)
+2026-06-24 13:26:34,776 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-77
+2026-06-24 13:26:34,776 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-77
+2026-06-24 13:26:41,024 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-78
+2026-06-24 13:26:41,024 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-78
+2026-06-24 13:26:47,738 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-79
+2026-06-24 13:26:47,739 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-79
+2026-06-24 13:26:56,542 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-80
+2026-06-24 13:26:56,542 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-80
+2026-06-24 13:26:58,061 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-85
+2026-06-24 13:26:58,061 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-85
+2026-06-24 13:27:00,097 INFO o.a.j.r.Summariser: summary +    274 in 00:00:30 =    9.2/s Avg: 45215 Min: 29494 Max: 59686 Err:    33 (12.04%) Active: 423 Started: 500 Finished: 77
+2026-06-24 13:27:00,097 INFO o.a.j.r.Summariser: summary =  15205 in 00:15:01 =   16.9/s Avg: 25917 Min:   107 Max: 59838 Err:   109 (0.72%)
+2026-06-24 13:27:02,869 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-81
+2026-06-24 13:27:02,869 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-81
+2026-06-24 13:27:08,122 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-82
+2026-06-24 13:27:08,123 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-82
+2026-06-24 13:27:12,494 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-83
+2026-06-24 13:27:12,495 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-83
+2026-06-24 13:27:18,801 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-84
+2026-06-24 13:27:18,801 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-84
+2026-06-24 13:27:29,167 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-86
+2026-06-24 13:27:29,167 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-86
+2026-06-24 13:27:30,036 INFO o.a.j.r.Summariser: summary +    356 in 00:00:30 =   11.9/s Avg: 51957 Min: 25519 Max: 901903 Err:     0 (0.00%) Active: 418 Started: 500 Finished: 82
+2026-06-24 13:27:30,036 INFO o.a.j.r.Summariser: summary =  15561 in 00:15:31 =   16.7/s Avg: 26513 Min:   107 Max: 901903 Err:   109 (0.70%)
+2026-06-24 13:27:34,923 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-87
+2026-06-24 13:27:34,923 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-87
+2026-06-24 13:27:41,879 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-88
+2026-06-24 13:27:41,879 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-88
+2026-06-24 13:27:45,643 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-89
+2026-06-24 13:27:45,643 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-89
+2026-06-24 13:27:52,389 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-90
+2026-06-24 13:27:52,389 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-90
+2026-06-24 13:27:54,668 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-91
+2026-06-24 13:27:54,668 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-91
+2026-06-24 13:28:00,036 INFO o.a.j.r.Summariser: summary +    256 in 00:00:30 =    8.5/s Avg: 40202 Min: 26067 Max: 56449 Err:     0 (0.00%) Active: 413 Started: 500 Finished: 87
+2026-06-24 13:28:00,036 INFO o.a.j.r.Summariser: summary =  15817 in 00:16:01 =   16.5/s Avg: 26735 Min:   107 Max: 901903 Err:   109 (0.69%)
+2026-06-24 13:28:01,427 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-92
+2026-06-24 13:28:01,427 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-92
+2026-06-24 13:28:06,789 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-98
+2026-06-24 13:28:06,790 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-98
+2026-06-24 13:28:07,888 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-93
+2026-06-24 13:28:07,888 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-93
+2026-06-24 13:28:13,362 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-94
+2026-06-24 13:28:13,362 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-94
+2026-06-24 13:28:15,237 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-100
+2026-06-24 13:28:15,238 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-100
+2026-06-24 13:28:18,892 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-95
+2026-06-24 13:28:18,892 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-95
+2026-06-24 13:28:24,573 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-96
+2026-06-24 13:28:24,573 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-96
+2026-06-24 13:28:29,210 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-97
+2026-06-24 13:28:29,210 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-97
+2026-06-24 13:28:30,063 INFO o.a.j.r.Summariser: summary +    303 in 00:00:30 =   10.1/s Avg: 45163 Min: 27250 Max: 57814 Err:     0 (0.00%) Active: 405 Started: 500 Finished: 95
+2026-06-24 13:28:30,063 INFO o.a.j.r.Summariser: summary =  16120 in 00:16:31 =   16.3/s Avg: 27081 Min:   107 Max: 901903 Err:   109 (0.68%)
+2026-06-24 13:28:36,265 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-99
+2026-06-24 13:28:36,266 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-99
+2026-06-24 13:28:45,040 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-101
+2026-06-24 13:28:45,040 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-101
+2026-06-24 13:28:49,767 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-102
+2026-06-24 13:28:49,767 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-102
+2026-06-24 13:28:54,248 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-103
+2026-06-24 13:28:54,248 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-103
+2026-06-24 13:29:00,088 INFO o.a.j.r.Summariser: summary +    310 in 00:00:30 =   10.3/s Avg: 39546 Min: 25547 Max: 56732 Err:     0 (0.00%) Active: 401 Started: 500 Finished: 99
+2026-06-24 13:29:00,088 INFO o.a.j.r.Summariser: summary =  16430 in 00:17:01 =   16.1/s Avg: 27316 Min:   107 Max: 901903 Err:   109 (0.66%)
+2026-06-24 13:29:01,067 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-104
+2026-06-24 13:29:01,067 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-104
+2026-06-24 13:29:05,442 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-105
+2026-06-24 13:29:05,442 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-105
+2026-06-24 13:29:10,602 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-106
+2026-06-24 13:29:10,602 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-106
+2026-06-24 13:29:15,214 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-107
+2026-06-24 13:29:15,214 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-107
+2026-06-24 13:29:19,892 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-108
+2026-06-24 13:29:19,892 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-108
+2026-06-24 13:29:22,612 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-109
+2026-06-24 13:29:22,612 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-109
+2026-06-24 13:29:25,927 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-110
+2026-06-24 13:29:25,927 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-110
+2026-06-24 13:29:28,572 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-111
+2026-06-24 13:29:28,572 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-111
+2026-06-24 13:29:30,336 INFO o.a.j.r.Summariser: summary +    263 in 00:00:30 =    8.7/s Avg: 42178 Min: 27533 Max: 56519 Err:     4 (1.52%) Active: 393 Started: 500 Finished: 107
+2026-06-24 13:29:30,337 INFO o.a.j.r.Summariser: summary =  16693 in 00:17:31 =   15.9/s Avg: 27550 Min:   107 Max: 901903 Err:   113 (0.68%)
+2026-06-24 13:29:33,658 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-112
+2026-06-24 13:29:33,659 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-112
+2026-06-24 13:29:38,572 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-113
+2026-06-24 13:29:38,572 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-113
+2026-06-24 13:29:42,911 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-114
+2026-06-24 13:29:42,911 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-114
+2026-06-24 13:29:46,487 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-115
+2026-06-24 13:29:46,488 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-115
+2026-06-24 13:29:50,479 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-116
+2026-06-24 13:29:50,479 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-116
+2026-06-24 13:29:53,110 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-117
+2026-06-24 13:29:53,110 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-117
+2026-06-24 13:29:57,587 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-118
+2026-06-24 13:29:57,587 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-118
+2026-06-24 13:30:00,026 INFO o.a.j.r.Summariser: summary +    300 in 00:00:30 =   10.1/s Avg: 44390 Min: 26510 Max: 58926 Err:     0 (0.00%) Active: 386 Started: 500 Finished: 114
+2026-06-24 13:30:00,026 INFO o.a.j.r.Summariser: summary =  16993 in 00:18:01 =   15.7/s Avg: 27848 Min:   107 Max: 901903 Err:   113 (0.66%)
+2026-06-24 13:30:03,147 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-119
+2026-06-24 13:30:03,147 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-119
+2026-06-24 13:30:08,548 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-120
+2026-06-24 13:30:08,548 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-120
+2026-06-24 13:30:11,564 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-121
+2026-06-24 13:30:11,564 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-121
+2026-06-24 13:30:15,630 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-122
+2026-06-24 13:30:15,630 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-122
+2026-06-24 13:30:18,436 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-123
+2026-06-24 13:30:18,436 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-123
+2026-06-24 13:30:24,836 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-124
+2026-06-24 13:30:24,836 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-124
+2026-06-24 13:30:27,668 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-125
+2026-06-24 13:30:27,668 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-125
+2026-06-24 13:30:30,025 INFO o.a.j.r.Summariser: summary +    279 in 00:00:30 =    9.3/s Avg: 39495 Min: 26231 Max: 56664 Err:     0 (0.00%) Active: 379 Started: 500 Finished: 121
+2026-06-24 13:30:30,025 INFO o.a.j.r.Summariser: summary =  17272 in 00:18:31 =   15.6/s Avg: 28036 Min:   107 Max: 901903 Err:   113 (0.65%)
+2026-06-24 13:30:31,259 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-126
+2026-06-24 13:30:31,259 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-126
+2026-06-24 13:30:35,771 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-127
+2026-06-24 13:30:35,771 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-127
+2026-06-24 13:30:41,827 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-128
+2026-06-24 13:30:41,827 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-128
+2026-06-24 13:30:45,101 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-129
+2026-06-24 13:30:45,102 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-129
+2026-06-24 13:30:49,030 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-130
+2026-06-24 13:30:49,030 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-130
+2026-06-24 13:30:52,968 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-131
+2026-06-24 13:30:52,968 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-131
+2026-06-24 13:30:53,799 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-139
+2026-06-24 13:30:53,799 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-139
+2026-06-24 13:30:56,123 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-140
+2026-06-24 13:30:56,123 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-140
+2026-06-24 13:30:56,968 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-132
+2026-06-24 13:30:56,968 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-132
+2026-06-24 13:31:00,027 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-141
+2026-06-24 13:31:00,027 INFO o.a.j.r.Summariser: summary +    236 in 00:00:30 =    7.9/s Avg: 43746 Min: 27015 Max: 57905 Err:     0 (0.00%) Active: 370 Started: 500 Finished: 130
+2026-06-24 13:31:00,027 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-141
+2026-06-24 13:31:00,028 INFO o.a.j.r.Summariser: summary =  17508 in 00:19:01 =   15.4/s Avg: 28248 Min:   107 Max: 901903 Err:   113 (0.65%)
+2026-06-24 13:31:02,111 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-133
+2026-06-24 13:31:02,111 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-133
+2026-06-24 13:31:03,545 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-142
+2026-06-24 13:31:03,546 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-142
+2026-06-24 13:31:05,029 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-134
+2026-06-24 13:31:05,029 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-134
+2026-06-24 13:31:07,876 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-144
+2026-06-24 13:31:07,876 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-144
+2026-06-24 13:31:09,025 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-135
+2026-06-24 13:31:09,025 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-135
+2026-06-24 13:31:12,621 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-136
+2026-06-24 13:31:12,621 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-136
+2026-06-24 13:31:15,056 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-137
+2026-06-24 13:31:15,056 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-137
+2026-06-24 13:31:17,507 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-138
+2026-06-24 13:31:17,507 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-138
+2026-06-24 13:31:30,165 INFO o.a.j.r.Summariser: summary +    307 in 00:00:30 =   10.2/s Avg: 43474 Min: 24959 Max: 57978 Err:     0 (0.00%) Active: 361 Started: 500 Finished: 139
+2026-06-24 13:31:30,166 INFO o.a.j.r.Summariser: summary =  17815 in 00:19:31 =   15.2/s Avg: 28510 Min:   107 Max: 901903 Err:   113 (0.63%)
+2026-06-24 13:31:30,379 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-143
+2026-06-24 13:31:30,380 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-143
+2026-06-24 13:31:36,211 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-145
+2026-06-24 13:31:36,211 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-145
+2026-06-24 13:31:38,098 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-146
+2026-06-24 13:31:38,099 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-146
+2026-06-24 13:31:40,604 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-147
+2026-06-24 13:31:40,604 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-147
+2026-06-24 13:31:44,425 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-148
+2026-06-24 13:31:44,425 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-148
+2026-06-24 13:31:47,630 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-149
+2026-06-24 13:31:47,630 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-149
+2026-06-24 13:31:49,242 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-150
+2026-06-24 13:31:49,243 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-150
+2026-06-24 13:31:53,300 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-151
+2026-06-24 13:31:53,300 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-151
+2026-06-24 13:31:56,211 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-152
+2026-06-24 13:31:56,211 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-152
+2026-06-24 13:31:58,489 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-153
+2026-06-24 13:31:58,489 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-153
+2026-06-24 13:32:00,352 INFO o.a.j.r.Summariser: summary +    253 in 00:00:30 =    8.4/s Avg: 37990 Min: 24800 Max: 54935 Err:     0 (0.00%) Active: 351 Started: 500 Finished: 149
+2026-06-24 13:32:00,352 INFO o.a.j.r.Summariser: summary =  18068 in 00:20:01 =   15.0/s Avg: 28643 Min:   107 Max: 901903 Err:   113 (0.63%)
+2026-06-24 13:32:01,079 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-154
+2026-06-24 13:32:01,079 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-154
+2026-06-24 13:32:03,974 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-155
+2026-06-24 13:32:03,974 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-155
+2026-06-24 13:32:06,459 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-156
+2026-06-24 13:32:06,459 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-156
+2026-06-24 13:32:08,847 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-157
+2026-06-24 13:32:08,847 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-157
+2026-06-24 13:32:12,310 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-158
+2026-06-24 13:32:12,310 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-158
+2026-06-24 13:32:13,930 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-159
+2026-06-24 13:32:13,930 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-159
+2026-06-24 13:32:16,343 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-160
+2026-06-24 13:32:16,343 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-160
+2026-06-24 13:32:19,645 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-161
+2026-06-24 13:32:19,645 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-161
+2026-06-24 13:32:20,690 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-173
+2026-06-24 13:32:20,690 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-173
+2026-06-24 13:32:23,296 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-162
+2026-06-24 13:32:23,296 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-162
+2026-06-24 13:32:25,671 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-163
+2026-06-24 13:32:25,671 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-163
+2026-06-24 13:32:27,891 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-164
+2026-06-24 13:32:27,891 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-164
+2026-06-24 13:32:30,570 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-165
+2026-06-24 13:32:30,570 INFO o.a.j.r.Summariser: summary +    237 in 00:00:30 =    7.8/s Avg: 43747 Min: 27013 Max: 55931 Err:     0 (0.00%) Active: 339 Started: 500 Finished: 161
+2026-06-24 13:32:30,570 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-165
+2026-06-24 13:32:30,570 INFO o.a.j.r.Summariser: summary =  18305 in 00:20:31 =   14.9/s Avg: 28838 Min:   107 Max: 901903 Err:   113 (0.62%)
+2026-06-24 13:32:33,336 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-166
+2026-06-24 13:32:33,336 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-166
+2026-06-24 13:32:35,119 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-167
+2026-06-24 13:32:35,119 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-167
+2026-06-24 13:32:37,288 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-168
+2026-06-24 13:32:37,288 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-168
+2026-06-24 13:32:38,048 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-182
+2026-06-24 13:32:38,048 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-182
+2026-06-24 13:32:38,705 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-169
+2026-06-24 13:32:38,705 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-169
+2026-06-24 13:32:40,509 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-170
+2026-06-24 13:32:40,509 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-170
+2026-06-24 13:32:41,895 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-171
+2026-06-24 13:32:41,895 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-171
+2026-06-24 13:32:43,470 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-172
+2026-06-24 13:32:43,470 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-172
+2026-06-24 13:32:46,564 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-174
+2026-06-24 13:32:46,564 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-174
+2026-06-24 13:32:48,060 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-175
+2026-06-24 13:32:48,060 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-175
+2026-06-24 13:32:50,267 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-176
+2026-06-24 13:32:50,267 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-176
+2026-06-24 13:32:51,113 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-177
+2026-06-24 13:32:51,113 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-177
+2026-06-24 13:32:53,455 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-178
+2026-06-24 13:32:53,455 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-178
+2026-06-24 13:32:56,284 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-179
+2026-06-24 13:32:56,284 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-179
+2026-06-24 13:32:57,119 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-180
+2026-06-24 13:32:57,119 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-180
+2026-06-24 13:32:58,298 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-181
+2026-06-24 13:32:58,298 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-181
+2026-06-24 13:33:00,100 INFO o.a.j.r.Summariser: summary +    313 in 00:00:30 =   10.6/s Avg: 39223 Min: 22266 Max: 56349 Err:     0 (0.00%) Active: 322 Started: 500 Finished: 178
+2026-06-24 13:33:00,100 INFO o.a.j.r.Summariser: summary =  18618 in 00:21:01 =   14.8/s Avg: 29013 Min:   107 Max: 901903 Err:   113 (0.61%)
+2026-06-24 13:33:03,168 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-183
+2026-06-24 13:33:03,168 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-183
+2026-06-24 13:33:04,231 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-184
+2026-06-24 13:33:04,231 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-184
+2026-06-24 13:33:06,243 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-185
+2026-06-24 13:33:06,243 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-185
+2026-06-24 13:33:10,816 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-186
+2026-06-24 13:33:10,817 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-186
+2026-06-24 13:33:11,123 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-187
+2026-06-24 13:33:11,123 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-187
+2026-06-24 13:33:17,456 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-188
+2026-06-24 13:33:17,456 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-188
+2026-06-24 13:33:17,965 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-205
+2026-06-24 13:33:17,965 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-205
+2026-06-24 13:33:18,801 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-189
+2026-06-24 13:33:18,801 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-189
+2026-06-24 13:33:19,809 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-190
+2026-06-24 13:33:19,809 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-190
+2026-06-24 13:33:19,968 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-191
+2026-06-24 13:33:19,968 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-191
+2026-06-24 13:33:20,968 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-229
+2026-06-24 13:33:20,969 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-229
+2026-06-24 13:33:23,087 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-192
+2026-06-24 13:33:23,087 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-192
+2026-06-24 13:33:24,672 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-193
+2026-06-24 13:33:24,672 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-193
+2026-06-24 13:33:25,276 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-194
+2026-06-24 13:33:25,276 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-211
+2026-06-24 13:33:25,276 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-194
+2026-06-24 13:33:25,277 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-211
+2026-06-24 13:33:27,784 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-195
+2026-06-24 13:33:27,784 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-195
+2026-06-24 13:33:28,560 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-196
+2026-06-24 13:33:28,560 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-196
+2026-06-24 13:33:30,266 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-197
+2026-06-24 13:33:30,266 INFO o.a.j.r.Summariser: summary +    218 in 00:00:30 =    7.2/s Avg: 37851 Min: 22583 Max: 55648 Err:    45 (20.64%) Active: 305 Started: 500 Finished: 195
+2026-06-24 13:33:30,266 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-197
+2026-06-24 13:33:30,266 INFO o.a.j.r.Summariser: summary =  18836 in 00:21:31 =   14.6/s Avg: 29115 Min:   107 Max: 901903 Err:   158 (0.84%)
+2026-06-24 13:33:30,514 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-215
+2026-06-24 13:33:30,514 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-215
+2026-06-24 13:33:30,974 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-198
+2026-06-24 13:33:30,974 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-198
+2026-06-24 13:33:33,806 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-199
+2026-06-24 13:33:33,807 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-199
+2026-06-24 13:33:34,416 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-200
+2026-06-24 13:33:34,416 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-200
+2026-06-24 13:33:35,979 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-201
+2026-06-24 13:33:35,979 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-201
+2026-06-24 13:33:36,719 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-202
+2026-06-24 13:33:36,719 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-202
+2026-06-24 13:33:39,077 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-222
+2026-06-24 13:33:39,077 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-222
+2026-06-24 13:33:42,161 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-203
+2026-06-24 13:33:42,161 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-203
+2026-06-24 13:33:43,606 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-204
+2026-06-24 13:33:43,606 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-204
+2026-06-24 13:33:46,878 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-206
+2026-06-24 13:33:46,878 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-206
+2026-06-24 13:33:48,198 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-227
+2026-06-24 13:33:48,198 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-227
+2026-06-24 13:33:48,654 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-207
+2026-06-24 13:33:48,654 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-207
+2026-06-24 13:33:50,392 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-208
+2026-06-24 13:33:50,392 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-208
+2026-06-24 13:33:51,846 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-209
+2026-06-24 13:33:51,846 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-209
+2026-06-24 13:33:53,518 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-210
+2026-06-24 13:33:53,518 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-210
+2026-06-24 13:33:56,069 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-212
+2026-06-24 13:33:56,069 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-212
+2026-06-24 13:33:56,433 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-213
+2026-06-24 13:33:56,433 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-213
+2026-06-24 13:33:58,642 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-237
+2026-06-24 13:33:58,642 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-237
+2026-06-24 13:33:58,642 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-214
+2026-06-24 13:33:58,642 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-214
+2026-06-24 13:34:00,149 INFO o.a.j.r.Summariser: summary +    212 in 00:00:30 =    7.1/s Avg: 43118 Min: 27043 Max: 60290 Err:    20 (9.43%) Active: 285 Started: 500 Finished: 215
+2026-06-24 13:34:00,149 INFO o.a.j.r.Summariser: summary =  19048 in 00:22:01 =   14.4/s Avg: 29271 Min:   107 Max: 901903 Err:   178 (0.93%)
+2026-06-24 13:34:01,381 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-216
+2026-06-24 13:34:01,381 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-216
+2026-06-24 13:34:02,024 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-217
+2026-06-24 13:34:02,024 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-217
+2026-06-24 13:34:02,546 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-218
+2026-06-24 13:34:02,546 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-218
+2026-06-24 13:34:03,918 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-219
+2026-06-24 13:34:03,918 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-219
+2026-06-24 13:34:03,918 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-220
+2026-06-24 13:34:03,918 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-220
+2026-06-24 13:34:05,040 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-221
+2026-06-24 13:34:05,040 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-221
+2026-06-24 13:34:07,738 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-223
+2026-06-24 13:34:07,739 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-223
+2026-06-24 13:34:07,864 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-224
+2026-06-24 13:34:07,864 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-224
+2026-06-24 13:34:08,697 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-225
+2026-06-24 13:34:08,697 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-225
+2026-06-24 13:34:11,676 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-226
+2026-06-24 13:34:11,676 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-226
+2026-06-24 13:34:14,040 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-228
+2026-06-24 13:34:14,040 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-228
+2026-06-24 13:34:15,981 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-230
+2026-06-24 13:34:15,982 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-230
+2026-06-24 13:34:17,577 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-231
+2026-06-24 13:34:17,577 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-231
+2026-06-24 13:34:18,119 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-232
+2026-06-24 13:34:18,119 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-232
+2026-06-24 13:34:20,120 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-233
+2026-06-24 13:34:20,120 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-233
+2026-06-24 13:34:20,651 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-234
+2026-06-24 13:34:20,651 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-234
+2026-06-24 13:34:22,766 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-235
+2026-06-24 13:34:22,767 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-235
+2026-06-24 13:34:23,221 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-236
+2026-06-24 13:34:23,221 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-236
+2026-06-24 13:34:27,779 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-239
+2026-06-24 13:34:27,779 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-239
+2026-06-24 13:34:28,265 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-238
+2026-06-24 13:34:28,265 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-238
+2026-06-24 13:34:30,212 INFO o.a.j.r.Summariser: summary +    197 in 00:00:30 =    6.6/s Avg: 41777 Min: 24782 Max: 59716 Err:     0 (0.00%) Active: 265 Started: 500 Finished: 235
+2026-06-24 13:34:30,213 INFO o.a.j.r.Summariser: summary =  19245 in 00:22:31 =   14.2/s Avg: 29399 Min:   107 Max: 901903 Err:   178 (0.92%)
+2026-06-24 13:34:30,919 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-240
+2026-06-24 13:34:30,919 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-240
+2026-06-24 13:34:33,057 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-241
+2026-06-24 13:34:33,058 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-241
+2026-06-24 13:34:33,058 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-267
+2026-06-24 13:34:33,058 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-267
+2026-06-24 13:34:34,057 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-242
+2026-06-24 13:34:34,057 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-242
+2026-06-24 13:34:35,063 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-300
+2026-06-24 13:34:35,063 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-268
+2026-06-24 13:34:35,063 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-300
+2026-06-24 13:34:35,063 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-268
+2026-06-24 13:34:36,067 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-244
+2026-06-24 13:34:36,067 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-303
+2026-06-24 13:34:36,067 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-244
+2026-06-24 13:34:36,067 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-303
+2026-06-24 13:34:36,997 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-243
+2026-06-24 13:34:36,997 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-243
+2026-06-24 13:34:37,067 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-270
+2026-06-24 13:34:37,067 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-271
+2026-06-24 13:34:37,068 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-270
+2026-06-24 13:34:37,068 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-271
+2026-06-24 13:34:37,068 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-304
+2026-06-24 13:34:37,069 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-304
+2026-06-24 13:34:37,069 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-245
+2026-06-24 13:34:37,070 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-245
+2026-06-24 13:34:38,069 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-307
+2026-06-24 13:34:38,069 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-307
+2026-06-24 13:34:38,069 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-246
+2026-06-24 13:34:38,069 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-246
+2026-06-24 13:34:40,068 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-249
+2026-06-24 13:34:40,069 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-249
+2026-06-24 13:34:40,069 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-247
+2026-06-24 13:34:40,069 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-247
+2026-06-24 13:34:40,068 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-274
+2026-06-24 13:34:40,070 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-274
+2026-06-24 13:34:41,070 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-275
+2026-06-24 13:34:41,070 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-248
+2026-06-24 13:34:41,070 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-275
+2026-06-24 13:34:41,071 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-248
+2026-06-24 13:34:42,411 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-276
+2026-06-24 13:34:42,411 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-276
+2026-06-24 13:34:42,938 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-250
+2026-06-24 13:34:42,938 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-250
+2026-06-24 13:34:43,779 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-278
+2026-06-24 13:34:43,779 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-278
+2026-06-24 13:34:44,073 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-251
+2026-06-24 13:34:44,073 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-251
+2026-06-24 13:34:45,072 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-252
+2026-06-24 13:34:45,073 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-252
+2026-06-24 13:34:45,309 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-317
+2026-06-24 13:34:45,309 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-317
+2026-06-24 13:34:47,073 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-282
+2026-06-24 13:34:47,073 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-282
+2026-06-24 13:34:47,075 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-253
+2026-06-24 13:34:47,075 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-253
+2026-06-24 13:34:48,581 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-254
+2026-06-24 13:34:48,582 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-254
+2026-06-24 13:34:49,074 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-256
+2026-06-24 13:34:49,074 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-256
+2026-06-24 13:34:49,138 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-255
+2026-06-24 13:34:49,138 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-255
+2026-06-24 13:34:49,390 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-322
+2026-06-24 13:34:49,390 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-322
+2026-06-24 13:34:50,670 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-325
+2026-06-24 13:34:50,670 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-325
+2026-06-24 13:34:50,904 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-257
+2026-06-24 13:34:50,904 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-257
+2026-06-24 13:34:51,625 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-286
+2026-06-24 13:34:51,625 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-258
+2026-06-24 13:34:51,625 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-286
+2026-06-24 13:34:51,625 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-258
+2026-06-24 13:34:54,179 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-287
+2026-06-24 13:34:54,179 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-289
+2026-06-24 13:34:54,179 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-289
+2026-06-24 13:34:54,179 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-287
+2026-06-24 13:34:54,181 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-288
+2026-06-24 13:34:54,181 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-288
+2026-06-24 13:34:55,295 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-259
+2026-06-24 13:34:55,295 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-259
+2026-06-24 13:34:55,298 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-260
+2026-06-24 13:34:55,298 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-260
+2026-06-24 13:34:56,191 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-290
+2026-06-24 13:34:56,191 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-290
+2026-06-24 13:34:56,191 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-261
+2026-06-24 13:34:56,192 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-261
+2026-06-24 13:34:57,182 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-334
+2026-06-24 13:34:57,182 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-291
+2026-06-24 13:34:57,182 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-334
+2026-06-24 13:34:57,182 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-291
+2026-06-24 13:34:58,200 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-263
+2026-06-24 13:34:58,201 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-263
+2026-06-24 13:34:59,201 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-293
+2026-06-24 13:34:59,201 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-293
+2026-06-24 13:34:59,205 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-264
+2026-06-24 13:34:59,205 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-264
+2026-06-24 13:35:00,205 INFO o.a.j.r.Summariser: summary +    223 in 00:00:30 =    7.4/s Avg: 41945 Min: 28894 Max: 61018 Err:   130 (58.30%) Active: 217 Started: 500 Finished: 283
+2026-06-24 13:35:00,206 INFO o.a.j.r.Summariser: summary =  19468 in 00:23:01 =   14.1/s Avg: 29543 Min:   107 Max: 901903 Err:   308 (1.58%)
+2026-06-24 13:35:00,207 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-295
+2026-06-24 13:35:00,207 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-295
+2026-06-24 13:35:00,259 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-262
+2026-06-24 13:35:00,260 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-262
+2026-06-24 13:35:01,219 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-265
+2026-06-24 13:35:01,219 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-265
+2026-06-24 13:35:05,088 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-266
+2026-06-24 13:35:05,089 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-266
+2026-06-24 13:35:05,273 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-299
+2026-06-24 13:35:05,273 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-299
+2026-06-24 13:35:05,273 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-301
+2026-06-24 13:35:05,274 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-301
+2026-06-24 13:35:06,278 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-296
+2026-06-24 13:35:06,279 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-296
+2026-06-24 13:35:07,280 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-302
+2026-06-24 13:35:07,281 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-302
+2026-06-24 13:35:07,283 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-269
+2026-06-24 13:35:07,283 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-269
+2026-06-24 13:35:08,294 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-305
+2026-06-24 13:35:08,296 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-305
+2026-06-24 13:35:09,282 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-306
+2026-06-24 13:35:09,283 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-306
+2026-06-24 13:35:10,297 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-309
+2026-06-24 13:35:10,297 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-309
+2026-06-24 13:35:10,298 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-311
+2026-06-24 13:35:10,298 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-311
+2026-06-24 13:35:10,304 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-308
+2026-06-24 13:35:10,305 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-308
+2026-06-24 13:35:11,300 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-273
+2026-06-24 13:35:11,301 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-310
+2026-06-24 13:35:11,302 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-310
+2026-06-24 13:35:11,302 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-273
+2026-06-24 13:35:11,314 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-272
+2026-06-24 13:35:11,315 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-272
+2026-06-24 13:35:13,318 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-312
+2026-06-24 13:35:13,318 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-312
+2026-06-24 13:35:14,336 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-313
+2026-06-24 13:35:14,336 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-315
+2026-06-24 13:35:14,336 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-313
+2026-06-24 13:35:14,336 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-315
+2026-06-24 13:35:15,338 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-314
+2026-06-24 13:35:15,338 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-314
+2026-06-24 13:35:15,341 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-318
+2026-06-24 13:35:15,341 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-318
+2026-06-24 13:35:15,361 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-316
+2026-06-24 13:35:15,365 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-316
+2026-06-24 13:35:16,338 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-277
+2026-06-24 13:35:16,338 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-277
+2026-06-24 13:35:16,341 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-320
+2026-06-24 13:35:16,342 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-320
+2026-06-24 13:35:17,339 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-319
+2026-06-24 13:35:17,339 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-319
+2026-06-24 13:35:17,344 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-280
+2026-06-24 13:35:17,344 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-280
+2026-06-24 13:35:18,340 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-321
+2026-06-24 13:35:18,340 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-321
+2026-06-24 13:35:18,519 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-297
+2026-06-24 13:35:18,519 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-297
+2026-06-24 13:35:19,362 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-279
+2026-06-24 13:35:19,362 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-281
+2026-06-24 13:35:19,362 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-279
+2026-06-24 13:35:19,362 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-281
+2026-06-24 13:35:20,344 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-284
+2026-06-24 13:35:20,344 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-284
+2026-06-24 13:35:21,344 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-323
+2026-06-24 13:35:21,344 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-323
+2026-06-24 13:35:21,345 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-324
+2026-06-24 13:35:21,345 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-324
+2026-06-24 13:35:21,913 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-283
+2026-06-24 13:35:21,914 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-283
+2026-06-24 13:35:24,347 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-329
+2026-06-24 13:35:24,348 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-329
+2026-06-24 13:35:25,347 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-330
+2026-06-24 13:35:25,347 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-330
+2026-06-24 13:35:25,348 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-331
+2026-06-24 13:35:25,348 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-331
+2026-06-24 13:35:27,080 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-285
+2026-06-24 13:35:27,080 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-285
+2026-06-24 13:35:27,351 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-333
+2026-06-24 13:35:27,352 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-333
+2026-06-24 13:35:28,351 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-337
+2026-06-24 13:35:28,352 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-337
+2026-06-24 13:35:29,351 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-336
+2026-06-24 13:35:29,351 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-336
+2026-06-24 13:35:31,007 INFO o.a.j.r.Summariser: summary +    204 in 00:00:31 =    6.6/s Avg: 36523 Min: 30050 Max: 75974 Err:   180 (88.24%) Active: 175 Started: 500 Finished: 325
+2026-06-24 13:35:31,008 INFO o.a.j.r.Summariser: summary =  19672 in 00:23:31 =   13.9/s Avg: 29615 Min:   107 Max: 901903 Err:   488 (2.48%)
+2026-06-24 13:35:32,428 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-292
+2026-06-24 13:35:32,429 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-292
+2026-06-24 13:35:33,125 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-294
+2026-06-24 13:35:33,125 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-294
+2026-06-24 13:35:33,353 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-389
+2026-06-24 13:35:33,353 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-389
+2026-06-24 13:35:34,353 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-453
+2026-06-24 13:35:34,354 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-453
+2026-06-24 13:35:34,354 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-341
+2026-06-24 13:35:34,354 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-390
+2026-06-24 13:35:34,354 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-341
+2026-06-24 13:35:34,354 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-454
+2026-06-24 13:35:34,354 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-390
+2026-06-24 13:35:34,354 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-454
+2026-06-24 13:35:35,354 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-452
+2026-06-24 13:35:35,354 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-343
+2026-06-24 13:35:35,354 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-392
+2026-06-24 13:35:35,355 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-343
+2026-06-24 13:35:35,354 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-452
+2026-06-24 13:35:35,355 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-344
+2026-06-24 13:35:35,355 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-392
+2026-06-24 13:35:35,355 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-344
+2026-06-24 13:35:36,355 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-340
+2026-06-24 13:35:36,356 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-340
+2026-06-24 13:35:36,356 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-346
+2026-06-24 13:35:36,356 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-459
+2026-06-24 13:35:36,356 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-346
+2026-06-24 13:35:36,357 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-396
+2026-06-24 13:35:36,357 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-396
+2026-06-24 13:35:36,357 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-395
+2026-06-24 13:35:36,357 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-395
+2026-06-24 13:35:36,358 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-298
+2026-06-24 13:35:36,358 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-298
+2026-06-24 13:35:36,356 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-459
+2026-06-24 13:35:37,358 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-397
+2026-06-24 13:35:37,358 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-397
+2026-06-24 13:35:38,379 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-401
+2026-06-24 13:35:38,381 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-401
+2026-06-24 13:35:38,383 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-350
+2026-06-24 13:35:38,383 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-350
+2026-06-24 13:35:38,392 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-349
+2026-06-24 13:35:38,392 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-349
+2026-06-24 13:35:38,393 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-399
+2026-06-24 13:35:38,393 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-399
+2026-06-24 13:35:39,397 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-400
+2026-06-24 13:35:39,397 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-347
+2026-06-24 13:35:39,398 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-347
+2026-06-24 13:35:39,399 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-345
+2026-06-24 13:35:39,399 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-345
+2026-06-24 13:35:39,401 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-463
+2026-06-24 13:35:39,401 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-463
+2026-06-24 13:35:39,398 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-400
+2026-06-24 13:35:39,407 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-352
+2026-06-24 13:35:39,407 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-352
+2026-06-24 13:35:40,405 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-351
+2026-06-24 13:35:40,406 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-351
+2026-06-24 13:35:40,405 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-403
+2026-06-24 13:35:40,408 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-403
+2026-06-24 13:35:40,409 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-407
+2026-06-24 13:35:40,409 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-407
+2026-06-24 13:35:40,414 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-354
+2026-06-24 13:35:40,415 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-354
+2026-06-24 13:35:41,415 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-466
+2026-06-24 13:35:41,416 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-466
+2026-06-24 13:35:41,420 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-404
+2026-06-24 13:35:41,420 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-404
+2026-06-24 13:35:42,415 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-353
+2026-06-24 13:35:42,416 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-353
+2026-06-24 13:35:42,417 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-405
+2026-06-24 13:35:42,417 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-405
+2026-06-24 13:35:43,417 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-358
+2026-06-24 13:35:43,459 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-358
+2026-06-24 13:35:43,460 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-357
+2026-06-24 13:35:43,460 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-357
+2026-06-24 13:35:43,463 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-408
+2026-06-24 13:35:43,463 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-408
+2026-06-24 13:35:43,463 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-356
+2026-06-24 13:35:43,465 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-356
+2026-06-24 13:35:44,416 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-410
+2026-06-24 13:35:44,417 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-411
+2026-06-24 13:35:44,417 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-411
+2026-06-24 13:35:44,417 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-409
+2026-06-24 13:35:44,417 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-410
+2026-06-24 13:35:44,418 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-409
+2026-06-24 13:35:45,422 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-360
+2026-06-24 13:35:45,423 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-360
+2026-06-24 13:35:45,425 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-361
+2026-06-24 13:35:45,425 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-361
+2026-06-24 13:35:46,426 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-414
+2026-06-24 13:35:46,426 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-414
+2026-06-24 13:35:46,426 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-362
+2026-06-24 13:35:46,427 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-482
+2026-06-24 13:35:46,427 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-482
+2026-06-24 13:35:46,426 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-413
+2026-06-24 13:35:46,427 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-362
+2026-06-24 13:35:46,429 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-413
+2026-06-24 13:35:47,420 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-363
+2026-06-24 13:35:47,420 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-419
+2026-06-24 13:35:47,421 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-364
+2026-06-24 13:35:47,421 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-364
+2026-06-24 13:35:47,421 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-363
+2026-06-24 13:35:47,421 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-365
+2026-06-24 13:35:47,421 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-417
+2026-06-24 13:35:47,422 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-365
+2026-06-24 13:35:47,422 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-417
+2026-06-24 13:35:47,423 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-487
+2026-06-24 13:35:47,423 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-487
+2026-06-24 13:35:47,421 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-419
+2026-06-24 13:35:47,422 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-416
+2026-06-24 13:35:47,424 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-416
+2026-06-24 13:35:48,420 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-366
+2026-06-24 13:35:48,420 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-366
+2026-06-24 13:35:49,422 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-367
+2026-06-24 13:35:49,422 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-367
+2026-06-24 13:35:49,422 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-368
+2026-06-24 13:35:49,422 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-421
+2026-06-24 13:35:49,423 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-368
+2026-06-24 13:35:49,423 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-421
+2026-06-24 13:35:51,422 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-424
+2026-06-24 13:35:51,422 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-369
+2026-06-24 13:35:51,422 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-424
+2026-06-24 13:35:51,422 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-369
+2026-06-24 13:35:54,424 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-431
+2026-06-24 13:35:54,424 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-374
+2026-06-24 13:35:54,424 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-376
+2026-06-24 13:35:54,424 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-433
+2026-06-24 13:35:54,424 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-375
+2026-06-24 13:35:54,424 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-431
+2026-06-24 13:35:54,424 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-375
+2026-06-24 13:35:54,424 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-374
+2026-06-24 13:35:54,424 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-429
+2026-06-24 13:35:54,424 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-433
+2026-06-24 13:35:54,425 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-376
+2026-06-24 13:35:54,425 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-429
+2026-06-24 13:35:55,425 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-432
+2026-06-24 13:35:55,425 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-380
+2026-06-24 13:35:55,425 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-432
+2026-06-24 13:35:55,425 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-380
+2026-06-24 13:35:55,425 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-378
+2026-06-24 13:35:55,425 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-377
+2026-06-24 13:35:55,425 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-377
+2026-06-24 13:35:55,427 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-378
+2026-06-24 13:35:56,427 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-379
+2026-06-24 13:35:56,427 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-379
+2026-06-24 13:35:57,428 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-435
+2026-06-24 13:35:57,428 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-438
+2026-06-24 13:35:57,428 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-435
+2026-06-24 13:35:57,428 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-438
+2026-06-24 13:35:58,427 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-381
+2026-06-24 13:35:58,427 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-381
+2026-06-24 13:35:59,428 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-382
+2026-06-24 13:35:59,428 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-441
+2026-06-24 13:35:59,429 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-382
+2026-06-24 13:35:59,429 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-444
+2026-06-24 13:35:59,429 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-441
+2026-06-24 13:35:59,429 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-444
+2026-06-24 13:36:00,447 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-332
+2026-06-24 13:36:00,447 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-332
+2026-06-24 13:36:00,448 INFO o.a.j.r.Summariser: summary +    151 in 00:00:29 =    5.1/s Avg: 32421 Min: 30064 Max: 74578 Err:   130 (86.09%) Active: 96 Started: 500 Finished: 404
+2026-06-24 13:36:00,449 INFO o.a.j.r.Summariser: summary =  19823 in 00:24:01 =   13.8/s Avg: 29637 Min:   107 Max: 901903 Err:   618 (3.12%)
+2026-06-24 13:36:00,449 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-440
+2026-06-24 13:36:00,449 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-440
+2026-06-24 13:36:01,448 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-387
+2026-06-24 13:36:01,448 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-442
+2026-06-24 13:36:01,448 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-387
+2026-06-24 13:36:01,448 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-442
+2026-06-24 13:36:02,449 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-384
+2026-06-24 13:36:02,449 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-384
+2026-06-24 13:36:03,027 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-328
+2026-06-24 13:36:03,027 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-328
+2026-06-24 13:36:03,964 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-327
+2026-06-24 13:36:03,964 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-327
+2026-06-24 13:36:04,449 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-449
+2026-06-24 13:36:04,449 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-388
+2026-06-24 13:36:04,449 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-449
+2026-06-24 13:36:04,449 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-388
+2026-06-24 13:36:04,449 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-450
+2026-06-24 13:36:04,450 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-450
+2026-06-24 13:36:04,450 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-448
+2026-06-24 13:36:04,450 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-448
+2026-06-24 13:36:05,451 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-451
+2026-06-24 13:36:05,451 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-383
+2026-06-24 13:36:05,451 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-456
+2026-06-24 13:36:05,451 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-451
+2026-06-24 13:36:05,451 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-456
+2026-06-24 13:36:05,451 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-383
+2026-06-24 13:36:06,456 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-342
+2026-06-24 13:36:06,457 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-342
+2026-06-24 13:36:07,547 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-335
+2026-06-24 13:36:07,547 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-335
+2026-06-24 13:36:08,423 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-338
+2026-06-24 13:36:08,423 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-338
+2026-06-24 13:36:08,424 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-393
+2026-06-24 13:36:08,424 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-393
+2026-06-24 13:36:09,462 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-457
+2026-06-24 13:36:09,462 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-457
+2026-06-24 13:36:10,463 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-462
+2026-06-24 13:36:10,463 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-468
+2026-06-24 13:36:10,463 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-462
+2026-06-24 13:36:10,463 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-464
+2026-06-24 13:36:10,463 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-468
+2026-06-24 13:36:10,464 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-464
+2026-06-24 13:36:11,464 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-465
+2026-06-24 13:36:11,464 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-402
+2026-06-24 13:36:11,465 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-465
+2026-06-24 13:36:11,465 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-402
+2026-06-24 13:36:12,463 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-391
+2026-06-24 13:36:12,464 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-471
+2026-06-24 13:36:12,463 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-474
+2026-06-24 13:36:12,464 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-391
+2026-06-24 13:36:12,464 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-474
+2026-06-24 13:36:12,464 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-471
+2026-06-24 13:36:14,465 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-481
+2026-06-24 13:36:14,465 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-475
+2026-06-24 13:36:14,465 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-473
+2026-06-24 13:36:14,466 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-475
+2026-06-24 13:36:14,465 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-479
+2026-06-24 13:36:14,465 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-476
+2026-06-24 13:36:14,465 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-481
+2026-06-24 13:36:14,466 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-479
+2026-06-24 13:36:14,466 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-476
+2026-06-24 13:36:14,466 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-473
+2026-06-24 13:36:15,467 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-412
+2026-06-24 13:36:15,467 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-484
+2026-06-24 13:36:15,467 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-412
+2026-06-24 13:36:15,467 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-477
+2026-06-24 13:36:15,467 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-484
+2026-06-24 13:36:15,467 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-477
+2026-06-24 13:36:16,467 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-488
+2026-06-24 13:36:16,467 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-480
+2026-06-24 13:36:16,467 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-470
+2026-06-24 13:36:16,467 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-488
+2026-06-24 13:36:16,468 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-470
+2026-06-24 13:36:16,468 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-480
+2026-06-24 13:36:17,467 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-485
+2026-06-24 13:36:17,467 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-485
+2026-06-24 13:36:17,467 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-491
+2026-06-24 13:36:17,467 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-483
+2026-06-24 13:36:17,467 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-489
+2026-06-24 13:36:17,467 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-486
+2026-06-24 13:36:17,468 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-489
+2026-06-24 13:36:17,468 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-491
+2026-06-24 13:36:17,468 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-483
+2026-06-24 13:36:17,469 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-486
+2026-06-24 13:36:17,859 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-339
+2026-06-24 13:36:17,859 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-339
+2026-06-24 13:36:18,608 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-348
+2026-06-24 13:36:18,608 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-348
+2026-06-24 13:36:19,467 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-495
+2026-06-24 13:36:19,467 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-494
+2026-06-24 13:36:19,467 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-494
+2026-06-24 13:36:19,467 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-495
+2026-06-24 13:36:20,981 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-355
+2026-06-24 13:36:20,981 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-355
+2026-06-24 13:36:21,431 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-359
+2026-06-24 13:36:21,431 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-359
+2026-06-24 13:36:22,468 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-496
+2026-06-24 13:36:22,468 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-496
+2026-06-24 13:36:22,468 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-415
+2026-06-24 13:36:22,468 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-394
+2026-06-24 13:36:22,468 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-415
+2026-06-24 13:36:22,468 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-394
+2026-06-24 13:36:24,174 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-371
+2026-06-24 13:36:24,174 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-371
+2026-06-24 13:36:24,568 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-498
+2026-06-24 13:36:24,568 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-498
+2026-06-24 13:36:25,355 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-423
+2026-06-24 13:36:25,355 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-423
+2026-06-24 13:36:25,840 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-372
+2026-06-24 13:36:25,840 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-372
+2026-06-24 13:36:26,942 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-370
+2026-06-24 13:36:26,943 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-370
+2026-06-24 13:36:26,943 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-434
+2026-06-24 13:36:26,943 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-434
+2026-06-24 13:36:28,070 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-373
+2026-06-24 13:36:28,070 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-373
+2026-06-24 13:36:28,071 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-439
+2026-06-24 13:36:28,071 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-439
+2026-06-24 13:36:28,489 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-436
+2026-06-24 13:36:28,489 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-436
+2026-06-24 13:36:28,819 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-437
+2026-06-24 13:36:28,819 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-437
+2026-06-24 13:36:29,154 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-447
+2026-06-24 13:36:29,154 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-447
+2026-06-24 13:36:29,491 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-458
+2026-06-24 13:36:29,491 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-458
+2026-06-24 13:36:29,491 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-460
+2026-06-24 13:36:29,491 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-460
+2026-06-24 13:36:29,803 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-461
+2026-06-24 13:36:29,803 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-461
+2026-06-24 13:36:29,803 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-455
+2026-06-24 13:36:29,803 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-455
+2026-06-24 13:36:30,131 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-469
+2026-06-24 13:36:30,131 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-469
+2026-06-24 13:36:30,131 INFO o.a.j.r.Summariser: summary +     78 in 00:00:30 =    2.6/s Avg: 41488 Min: 24369 Max: 72771 Err:    47 (60.26%) Active: 30 Started: 500 Finished: 470
+2026-06-24 13:36:30,131 INFO o.a.j.r.Summariser: summary =  19901 in 00:24:31 =   13.5/s Avg: 29683 Min:   107 Max: 901903 Err:   665 (3.34%)
+2026-06-24 13:36:30,131 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-398
+2026-06-24 13:36:30,131 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-398
+2026-06-24 13:36:30,427 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-385
+2026-06-24 13:36:30,427 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-385
+2026-06-24 13:36:30,997 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-472
+2026-06-24 13:36:30,997 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-472
+2026-06-24 13:36:30,997 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-467
+2026-06-24 13:36:30,997 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-467
+2026-06-24 13:36:30,998 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-386
+2026-06-24 13:36:30,998 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-386
+2026-06-24 13:36:31,617 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-418
+2026-06-24 13:36:31,617 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-418
+2026-06-24 13:36:31,894 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-490
+2026-06-24 13:36:31,894 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-490
+2026-06-24 13:36:32,629 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-478
+2026-06-24 13:36:32,629 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-478
+2026-06-24 13:36:33,258 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-499
+2026-06-24 13:36:33,258 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-499
+2026-06-24 13:36:33,259 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-497
+2026-06-24 13:36:33,259 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-497
+2026-06-24 13:36:33,604 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-500
+2026-06-24 13:36:33,604 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-500
+2026-06-24 13:36:33,905 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-492
+2026-06-24 13:36:33,905 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-492
+2026-06-24 13:36:33,906 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-428
+2026-06-24 13:36:33,906 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-428
+2026-06-24 13:36:33,906 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-426
+2026-06-24 13:36:33,907 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-426
+2026-06-24 13:36:34,490 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-427
+2026-06-24 13:36:34,490 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-427
+2026-06-24 13:36:34,491 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-420
+2026-06-24 13:36:34,491 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-420
+2026-06-24 13:36:34,491 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-406
+2026-06-24 13:36:34,491 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-406
+2026-06-24 13:36:35,382 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-422
+2026-06-24 13:36:35,382 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-422
+2026-06-24 13:36:35,382 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-430
+2026-06-24 13:36:35,382 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-430
+2026-06-24 13:36:35,382 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-425
+2026-06-24 13:36:35,382 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-425
+2026-06-24 13:36:35,996 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-446
+2026-06-24 13:36:35,996 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-446
+2026-06-24 13:36:35,996 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-445
+2026-06-24 13:36:35,997 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-445
+2026-06-24 13:36:35,997 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-443
+2026-06-24 13:36:35,997 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-443
+2026-06-24 13:36:36,565 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-493
+2026-06-24 13:36:36,565 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-493
+2026-06-24 13:36:52,335 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-10
+2026-06-24 13:36:52,335 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-10
+2026-06-24 13:36:54,406 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-27
+2026-06-24 13:36:54,406 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-27
+2026-06-24 13:37:00,164 INFO o.a.j.r.Summariser: summary +     88 in 00:00:30 =    2.9/s Avg: 12096 Min:   375 Max: 50593 Err:     0 (0.00%) Active: 3 Started: 500 Finished: 497
+2026-06-24 13:37:00,164 INFO o.a.j.r.Summariser: summary =  19989 in 00:25:01 =   13.3/s Avg: 29606 Min:   107 Max: 901903 Err:   665 (3.33%)
+2026-06-24 13:37:02,176 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-16
+2026-06-24 13:37:02,176 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-16
+2026-06-24 13:37:11,009 INFO o.a.j.t.JMeterThread: Thread is done: Concurrent Users Simulation 1-52
+2026-06-24 13:37:11,009 INFO o.a.j.t.JMeterThread: Thread finished: Concurrent Users Simulation 1-52

@@ -2,13 +2,13 @@ package org.techmart.lk.web.util;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
 import org.techmart.lk.ejb.bean.MetricsTrackerBean;
 
 public class ServiceLocator {
 
-    private static final Map<String, Object> cache = new HashMap<>();
+    private static final Map<String, Object> cache = new ConcurrentHashMap<>();
 
     @SuppressWarnings("unchecked")
     public static <T> T lookup(String jndiName, Class<T> clazz) throws NamingException {

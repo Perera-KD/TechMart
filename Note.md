@@ -12,10 +12,7 @@ Stateful Session Beans 6
 Key characteristics: 6
 Singleton Session Beans 8
 Key characteristics: 8
-Context and Dependency Injection (CDI) 10
-Application Scope 11
-Request Scope 12
-Session Scope 13
+
 Dependency Injection Techniques 14
 @EJB Annotation 14
 When to Use @EJB 14
@@ -45,11 +42,7 @@ Key metrics: 28
 Performance Testing 29
 Types of performance tests: 30
 Performance optimization techniques: 30
-Practical Exercises 31
-Exercise 1: Create a simple EJB application 31
-Exercise 2: Implement a message-based notification system 31
-Exercise 3: Performance testing 31
-Additional Resources 31
+
 Introduction to J2EE
 Java 2 Enterprise Edition (J2EE), now known as Jakarta EE or Java EE, is a
 comprehensive platform for enterprise application development that evolved through several
@@ -165,8 +158,6 @@ public class ShoppingCartBean implements ShoppingCart {
 
  @Override
  public void checkout() {
- // Process the order
- // Clear the cart
  items.clear();
  }
 
@@ -192,7 +183,7 @@ Key characteristics:
 ❖ Useful for application-wide operations or caching
 Example:
 @Singleton
-@Startup // Eager initialization
+@Startup
 public class ConfigurationBean implements Configuration {
 
  private Properties config = new Properties();
@@ -222,142 +213,8 @@ Client Code:
 private Configuration configuration;
 public void doSomething() {
  String serverUrl = configuration.getProperty("server.url");
- // Use the configuration value
 }
-Context and Dependency Injection (CDI)
-Context and Dependency Injection (CDI) represents a cornerstone of modern Java
-EE development, introduced as part of Java EE 6 (JSR-299) and significantly enhanced in
-subsequent versions. CDI provides a comprehensive, type-safe dependency injection framework
-that dramatically reduces boilerplate code while enabling loose coupling between application
-components. At its core, CDI brings together dependency injection, contextual lifecycle
-management, and a powerful event model into a unified programming model.
-The "Context" in CDI refers to the ability to bind the lifecycle of components to welldefined, extensible contexts such as request, session, conversation, and application scopes. This
-contextual awareness means objects are automatically created and destroyed as their scope
-begins and ends, with the container handling all lifecycle management. The "Dependency
-Injection" aspect allows components to declare their dependencies using annotations rather than
-programmatically locating or instantiating required resources.
-CDI goes beyond basic dependency injection by providing powerful features
-including:
-● Type-safe injection: Using Java's typing system to ensure correctness at compile time
-● Qualifiers: Annotations that help differentiate between beans of the same type
-● Alternatives: Mechanism for swapping implementations based on deployment needs
-● Decorators: Intercept business method calls to add behavior dynamically
-● Interceptors: Add cross-cutting concerns like logging or security
-● Events and observers: Decouple components through a type-safe event system
-● Producer methods/fields: Generate objects dynamically when direct instantiation isn't
-possible
-● Portable extensions: Allow framework developers to extend CDI's capabilities
-CDI serves as the glue between different Java EE technologies, working
-seamlessly with EJBs, JPA, JAX-RS, and JSF. By reducing coupling between components, CDI
-significantly improves testability, as dependencies can be easily mocked or substituted during
-testing. Unlike earlier dependency injection approaches in Java EE, CDI is more comprehensive
-and designed as a core part of the platform rather than an add-on, making it the preferred
-approach for component wiring in modern Jakarta EE applications.
-Application Scope
-The @ApplicationScoped annotation defines beans with the broadest scope
-available in CDI. These beans are singletons within the application context, created once during
-application startup (or lazily on first reference) and destroyed only when the application shuts
-down. Application-scoped beans maintain their state throughout the entire application lifecycle
-and are shared across all users, sessions, and requests. This makes them ideal for:
-1. Global application configuration: Storing system-wide settings that apply to all users
-2. Application-wide caches: Maintaining data that should be shared among all users
-3. Connection pools: Managing shared resources like database connections
-4. Singleton services: Implementing services that require coordination across the entire
-application
-Application-scoped beans must be thread-safe, as they may be accessed
-concurrently by multiple threads. They can consume significant memory since they remain active
-for the application's entire lifespan. Since they're shared across all users, they cannot store userspecific information. Because these beans persist across the application's lifecycle, they're often
-used to initialize resources during application startup through @PostConstruct methods and
-release them during shutdown via @PreDestroy methods.
-Example:
-@ApplicationScoped
-public class SystemConfiguration {
- private Map<String, String> configValues = new ConcurrentHashMap<>();
 
- @PostConstruct
- public void initialize() {
- // Load configuration from database or files
- configValues.put("maxUploadSize", "10485760");
- configValues.put("allowedFileTypes", "pdf,docx,xlsx");
- }
-
- public String getConfigValue(String key) {
- return configValues.get(key);
- }
-
- public void setConfigValue(String key, String value) {
- configValues.put(key, value);
- }
-}
-Request Scope
-The @RequestScoped annotation defines beans with one of the most commonly
-used and shortest-lived scopes in CDI. These beans are created when an HTTP request begins
-and automatically destroyed when that request completes. Each request gets a fresh instance of
-request-scoped beans, ensuring complete isolation between different requests, even from the
-same user. This makes request scope particularly useful for:
-1. Request-specific processing: Handling individual HTTP request data
-2. Per-request caching: Storing computed values needed throughout a single request
-3. Request context maintenance: Tracking context information during request processing
-4. Form backing objects: Capturing and validating form submissions
-Request-scoped beans are ideal when you need to maintain state during a single
-request but want to ensure a clean slate for each new request. Unlike application-scoped beans,
-request-scoped beans don't need to be thread-safe since each request runs in its own thread.
-However, they cannot store data that needs to persist across multiple requests from the same
-user (use session scope for that). Request-scoped beans are lightweight from a memory
-perspective since they exist only for the duration of a request. They're often used with the MVC
-pattern in web applications to process individual user actions.
-Example:
-@RequestScoped
-public class SearchCriteria {
- private String keywords;
- private String category;
- private int maxResults = 20;
- private boolean includeInactive = false;
-
- // Getters and setters
-
- public List<Product> executeSearch(ProductRepository repository) {
- // Use current criteria to perform search
- return repository.findProducts(keywords, category, maxResults, includeInactive);
- }
-}
-Session Scope
-The @SessionScoped annotation defines beans that exist for the duration of a
-user's session with the application. These beans are created when a session starts (typically on
-a user's first interaction) and destroyed when the session ends (through timeout, explicit logout,
-or session invalidation). Session-scoped beans maintain state across multiple requests from the
-same user, providing continuity for individual user interactions. This makes them ideal for:
-1. User preferences: Storing display preferences, language settings, or themes
-2. Shopping carts: Maintaining items selected by users during browsing
-3. Wizards or multi-step processes: Preserving state across a sequence of interactions
-4. User authentication context: Storing security credentials and permissions after login
-Since session-scoped beans persist across requests, they must implement
-Serializable to support session persistence (particularly important in clustered environments).
-Unlike application-scoped beans, session-scoped beans are unique to each user, allowing
-personalized state management. However, they can consume significant memory in applications
-with many users or large session objects, as they remain in memory for the entire session duration
-(typically 30 minutes by default). They don't need to be thread-safe for a single user (browsers
-typically serialize requests), but should be designed carefully if the same session could be
-accessed from multiple browser tabs.
-Example:
-@SessionScoped
-public class UserPreferences implements Serializable {
- private static final long serialVersionUID = 1L;
-
- private String theme = "default";
- private Locale locale = Locale.getDefault();
- private int resultsPerPage = 10;
- private boolean advancedSearchEnabled = false;
-
- // Getters and setters
-
- public void resetToDefaults() {
- theme = "default";
- locale = Locale.getDefault();
- resultsPerPage = 10;
- advancedSearchEnabled = false;
- }
-}
 Dependency Injection Techniques
 @EJB Annotation
 The @EJB annotation is a powerful dependency injection mechanism that allows you to inject
@@ -376,17 +233,13 @@ public class OrderProcessor {
  private InventoryService inventoryService;
 
  public void processOrder(Order order) {
- // Validate customer
  boolean validCustomer = customerService.validateCustomer(order.getCustomerId());
 
  if (validCustomer) {
- // Check inventory
  boolean inStock = inventoryService.checkAvailability(order.getItems());
 
  if (inStock) {
- // Process the order
  inventoryService.updateInventory(order.getItems());
- // Further processing...
  }
  }
  }
@@ -395,7 +248,6 @@ When to Use @EJB
 The @EJB annotation is most appropriate when:
 ● You're working within a Java EE application server environment
 ● You need the services provided by EJBs (transactions, security, remoting)
-● You want to leverage container-managed dependencies
 InitialContext and JNDI Lookup
 The InitialContext and JNDI (Java Naming and Directory Interface) lookup system
 represents a foundational architecture within Java enterprise environments that enables
@@ -434,7 +286,6 @@ context.lookup("java:global/app/InventoryServiceBean");
  }
 
  public void processOrder(Order order) {
- // Similar processing logic as above
  }
 }
 Dependency Injection vs. Initial Context
@@ -663,9 +514,8 @@ public class NotificationReceiver {
  MessageConsumer consumer = session.createConsumer(notificationQueue);
  connection.start();
 
- // Receive up to 10 messages or until timeout
  for (int i = 0; i < 10; i++) {
- Message message = consumer.receive(1000); // 1 second timeout
+ Message message = consumer.receive(1000);
  if (message == null) {
  break;
  }
@@ -749,10 +599,8 @@ public class NotificationProcessorMDB implements MessageListener {
  String subject = mapMessage.getString("subject");
  String content = mapMessage.getString("content");
 
- // Process the notification
  emailService.sendEmail(recipient, subject, content);
 
- // Log the notification
  System.out.println("Notification sent to " + recipient);
  }
  } catch (Exception e) {
@@ -862,13 +710,12 @@ public class PerformanceInterceptor {
  return context.proceed();
  } finally {
  long endTime = System.nanoTime();
- long executionTime = (endTime - startTime) / 1_000_000; // Convert to milliseconds
+ long executionTime = (endTime - startTime) / 1_000_000;
 
  String className = context.getTarget().getClass().getName();
  String methodName = context.getMethod().getName();
  System.out.printf("Method %s.%s executed in %d ms%n", className, methodName,
 executionTime);
- // In a real application, you would log this to a monitoring system
  }
  }
 }
@@ -876,28 +723,4 @@ To enable the interceptor:
 @Stateless
 @Interceptors(PerformanceInterceptor.class)
 public class ProductServiceBean implements ProductService {
- // Implementation
-}
-Practical Exercises
-Exercise 1: Create a simple EJB application
-● Create a stateless session bean for product management
-● Create a stateful session bean for a shopping cart
-● Create a singleton bean for application configuration
-● Create a client to use these beans
-● Package the application as an EAR file and deploy it
-Exercise 2: Implement a message-based notification system
-● Create a notification message producer
-● Create a message-driven bean to process notifications
-● Test sending and receiving notifications
-● Implement error handling and retries
-Exercise 3: Performance testing
-● Create a test plan in JMeter
-● Run load tests with different numbers of users
-● Analyze results and identify bottlenecks
-● Implement optimizations and retest
-Additional Resources
-● Jakarta EE Documentation
-● WildFly Documentation
-● JMS Specification
-● Apache JMeter User's Manual
-● Java EE Tutorials
+}

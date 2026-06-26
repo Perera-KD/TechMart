@@ -117,7 +117,7 @@ Object resolved = new InitialContext().lookup(jndiName);
 long durationMs = (System.nanoTime() - startTime) / 1_000_000;
 metricsTracker.recordJndiLookup(durationMs);
 ```
-Looked-up EJB stubs are cached in a thread-safe `ConcurrentHashMap` map to eliminate JNDI context traversal overhead on subsequent accesses.
+Looked-up EJB stubs are cached in a thread-safe `ConcurrentHashMap` (replacing the initial non-thread-safe `HashMap` implementation to prevent concurrency race conditions under high servlet workloads) to eliminate JNDI context traversal overhead on subsequent accesses.
 
 ---
 

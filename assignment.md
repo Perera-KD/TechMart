@@ -11,29 +11,7 @@ validation, and documentation of design decisions and system improvements.
 Duration 3 Weeks
 Submission Via Online (Student Portal)
 Document Format Document Format (Pdf)
-GUIDELINES FOR CANDIDATES
-● Your studies will be governed by the Java Institute Academic Regulations on Assessment, Progression and
-Awards.
-● Students are expected to use reference books, the Internet, journals and other similar sources in order to
-accomplish the task specified above.
-● Students are expected to refrain from repeating any content in their research document.
-● At the re-assessment attempt, the mark is capped and the maximum mark that can be achieved is 40%.
-CHEATING AND PLAGIARISM
-Both cheating and plagiarism are totally unacceptable, and the Institute maintains a strict policy against them. It is
-YOUR responsibility to be aware of this policy and to act accordingly.
-The basic principles are:
-● Don’t pass off anyone else’s work as your own, including coding examples. This is plagiarism and is
-viewed extremely seriously by the Institute.
-● Don’t submit a piece of work, in whole or in part, that has already been submitted for assessment
-elsewhere. This is called duplication and, like plagiarism, is viewed extremely seriously by the Institute.
-● Always acknowledge all the sources you have used in your assignment or project.
-● If you are using the exact words of another person, always put them in quotation marks.
-● Check whether the assignment is to be completed individually or if you are allowed to work with others.
-● If you are doing group work, be clear about which parts you are expected to complete on your own.
-● Never make up or falsify data to support your arguments.
-● Never allow others to copy your work.
-● Never lend disks, memory sticks, or copies of your coursework to any other student at the Institute, as
-this may lead to accusations of collusion
+
 LEARNING OUTCOMES:
 This assignment addresses the following unit learning outcomes:
 1. Convey critical information and defining features of the Java Platform, Enterprise Edition (also known as
@@ -209,30 +187,7 @@ Critical reflection on system performance, bottlenecks, and implemented enhancem
 ▪ Testing Documentation and Recommendations (5 marks)
 Well-structured documentation including tools used, methodologies applied, and future improvement
 suggestions.
-Assignment Submission Guidelines for Students
-● Format:
-▪ Assignment Documents Rules:
-▪ Paper Size: A4
-▪ Line Spacing:1.5
-▪ Header and Footer:1 inch
-▪ Basic Font Size:11pt
-▪ Heading:14pt
-▪ Sub-headings:12pt, Bold
-▪ Body:11pt, Justified Aligned
-▪ Font Style: Times New Roman/Calibri
-▪ Provide the following information in their assignment coversheet:
-▪ Student name
-▪ NIC No
-▪ Subject name
-▪ Subject code
-▪ Branch
-▪ Working project as compressed archive with complete implementation
-▪ Combined documentation as single PDF (2,500-3,500 words total)
-▪ Performance monitoring results and optimization evidence
-● Code Requirements: Must compile, deploy, and demonstrate performance optimization
-● Individual Work: Original implementation and critical analysis required
-● Resources: Official Java EE documentation and academic sources with proper citation
-● Referencing: Must be cited using the Harvard referencing system, with a reference list included at the end.
+
 Submission Checklist:
 ◻ Complete source code with performance monitoring
 ◻ Deployable application with optimization configurations
