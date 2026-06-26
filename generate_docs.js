@@ -3,7 +3,7 @@ const path = require('path');
 const axios = require('axios');
 const { Document, Packer, Paragraph, TextRun, ImageRun, Table, TableRow, TableCell, AlignmentType, HeadingLevel, WidthType, BorderStyle } = require('docx');
 
-const ARTIFACTS_DIR = 'C:\\Users\\Kylie\\.gemini\\antigravity-ide\\brain\\3ba54f1c-eaad-45a7-97db-29c2446856f0';
+const ARTIFACTS_DIR = 'C:\\Users\\Kylie\\.gemini\\antigravity-ide\\brain\\9c47b44b-60bf-4712-8d5f-477a54163856';
 
 // Diagrams definition in Mermaid syntax
 const DIAGRAMS = {

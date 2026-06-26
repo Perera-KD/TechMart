@@ -10,7 +10,7 @@
 
 ## 1. System Architecture and Component Relationships
 
-The TechMart E-Commerce Platform has been modernized from a legacy monolithic structure to a highly scalable, multi-tier enterprise architecture built on Jakarta EE 10. The system leverages component-based decoupling using Enterprise JavaBeans (EJBs), Java Message Service (JMS), and Jakarta Persistence (JPA). 
+The TechMart E-Commerce Platform has been modernized from a legacy monolithic structure to a highly scalable, multi-tier enterprise architecture built on Jakarta EE 10. The system leverages component-based decoupling using Enterprise JavaBeans (EJBs), Java Message Service (JMS), and Jakarta Persistence (JPA). From a theoretical standpoint, this architecture aligns directly with foundational models of distributed systems (Tanenbaum and Van Steen, 2002; Coulouris et al., 2012). Specifically, EJB components realize the distributed "remote object" model (via RMI over IIOP) to orchestrate transactional business logic, JMS implements the asynchronous message-passing concurrency paradigm to decouple processing nodes, and Jakarta Transactions (JTA) provides distributed ACID guarantees across database and message resources. 
 
 The logical design is partitioned into four major layers:
 1. **Client / Presentation Layer (WAR Module):** Houses JavaServer Pages (JSPs) that render dynamic HTML. HTTP requests are processed by Java Servlets acting as Front Controllers. A servlet filter is utilized to monitor HTTP performance.
@@ -172,6 +172,9 @@ Message-Driven Beans (MDBs) are stateless, container-managed JMS consumers that 
 - **Throughput Tuning:** MDB execution is tuned in Payara:
     - `max-pool-size=30`: Ensures high concurrent message throughput without overwhelming database connections.
     - `acknowledgeMode=Auto-acknowledge`: Balances throughput and delivery guarantees. If processing fails, the message rolls back for redelivery.
+- **Disaster Recovery SLA (Non-Functional Requirements):**
+    - **Recovery Time Objective (RTO):** 30 seconds (replica promotion time).
+    - **Recovery Point Objective (RPO):** 0 (synchronous DB replication, no committed data lost).
 
 ---
 
@@ -274,5 +277,7 @@ For the TechMart modernization project, Jakarta EE 10 was selected as the core e
 ## References
 
 - Burke, B. and Monson-Haefel, R., 2006. *Enterprise JavaBeans 3.0*. Sebastopol: O'Reilly Media.
+- Coulouris, G., Dollimore, J., Kindberg, T. and Blair, G., 2012. *Distributed Systems: Concepts and Design*. 5th ed. Boston: Addison-Wesley.
 - Oracle, 2023. *Jakarta Enterprise Edition (Jakarta EE) 10 Specification*. Eclipse Foundation. Available at: https://jakarta.ee/specifications/ [Accessed 22 June 2026].
 - Payara Foundation, 2024. *Payara Server 6 Enterprise Documentation*. Available at: https://docs.payara.fish/enterprise/ [Accessed 22 June 2026].
+- Tanenbaum, A.S. and Van Steen, M., 2002. *Distributed Systems: Principles and Paradigms*. Upper Saddle River: Prentice Hall.
