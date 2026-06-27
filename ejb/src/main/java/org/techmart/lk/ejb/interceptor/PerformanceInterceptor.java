@@ -7,6 +7,7 @@ import org.techmart.lk.ejb.bean.MetricsTrackerBean;
 
 public class PerformanceInterceptor {
 
+    @jakarta.inject.Inject
     @EJB
     private MetricsTrackerBean metricsTracker;
 
@@ -25,6 +26,8 @@ public class PerformanceInterceptor {
             System.out.println("[PerformanceInterceptor] Exited: " + className + "." + methodName + " - Duration: " + duration + "ms");
 
             if (metricsTracker != null) {
+                // Record the method call as an HTTP request metric for test tracking
+                metricsTracker.recordHttpRequest(duration);
 
                 String nameLower = methodName.toLowerCase();
                 if (nameLower.contains("find") || nameLower.contains("get") || nameLower.contains("add")

@@ -9,7 +9,7 @@ import jakarta.ejb.Startup;
     className = "com.mysql.cj.jdbc.MysqlDataSource",
     url = "jdbc:mysql://localhost:3307/techmart_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true",
     user = "root",
-    password = "dbms@java",
+    password = "", // Production credentials are injected via glassfish-resources.xml
 
     initialPoolSize = 5,
     minPoolSize = 5,

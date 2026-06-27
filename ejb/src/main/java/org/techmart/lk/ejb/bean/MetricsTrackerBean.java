@@ -8,6 +8,7 @@ import jakarta.ejb.Singleton;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
 
+@jakarta.enterprise.context.ApplicationScoped
 @Singleton
 @ConcurrencyManagement(ConcurrencyManagementType.CONTAINER)
 public class MetricsTrackerBean {

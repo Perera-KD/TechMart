@@ -233,13 +233,13 @@ For local development, we configure a container-managed Connection Pool inside t
     className = "com.mysql.cj.jdbc.MysqlDataSource",
     url = "jdbc:mysql://localhost:3307/techmart_db?createDatabaseIfNotExist=true",
     user = "root",
-    password = "dbms@java",
+    password = "", // Production credentials are injected via glassfish-resources.xml
     initialPoolSize = 5,
     minPoolSize = 5,
     maxPoolSize = 50
 )
 ```
-- **Credentials Externalization & Production Strategy:** Hardcoding passwords inside compile-time Java annotations (e.g. `password = "dbms@java"`) is a severe security vulnerability. To mitigate this in production, the annotation is used solely as a fallback for local developers. The official production configuration is externalized to the application server runtime using [glassfish-resources.xml](file:///c:/Users/Kylie/IdeaProjects/TechMart/deployment/payara/glassfish-resources.xml) (for Payara/GlassFish deployments) or system environment variables. This separates runtime configurations from code, enabling administrators to rotate DB credentials dynamically at deploy-time without rebuilding the Enterprise Archive (EAR).
+- **Credentials Externalization & Production Strategy:** Hardcoding passwords inside compile-time Java annotations is a severe security vulnerability. To mitigate this, the compile-time annotation specifies an empty password, and the official credentials are externalized to the application server runtime using [glassfish-resources.xml](file:///c:/Users/Kylie/IdeaProjects/TechMart/deployment/payara/glassfish-resources.xml) (for Payara/GlassFish deployments) or system environment variables. This separates runtime configurations from code, enabling administrators to rotate DB credentials dynamically at deploy-time without rebuilding the Enterprise Archive (EAR).
 - **Performance Trade-offs:** Initializing connections is expensive. By keeping a minimum pool size of 5 and maximum of 50, connections remain active. 
 - **DB Auto-Seeding:** `@Singleton @Startup` `DatabaseSeederBean` automatically populates the schema with admin credentials and initial inventory, ensuring the system is ready for testing immediately after deployment.
 
