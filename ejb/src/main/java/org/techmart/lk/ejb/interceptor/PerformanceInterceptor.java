@@ -26,7 +26,6 @@ public class PerformanceInterceptor {
             System.out.println("[PerformanceInterceptor] Exited: " + className + "." + methodName + " - Duration: " + duration + "ms");
 
             if (metricsTracker != null) {
-                // Record the method call as an HTTP request metric for test tracking
                 metricsTracker.recordHttpRequest(duration);
 
                 String nameLower = methodName.toLowerCase();

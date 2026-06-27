@@ -10,6 +10,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import jakarta.inject.Inject;
 import org.techmart.lk.ejb.remote.OrderService;
 import org.techmart.lk.ejb.interceptor.PerformanceInterceptor;
+
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -29,6 +30,7 @@ public class TechMartArquillianTest {
             .addClass(OrderServiceBean.class)
             .addClass(OrderService.class)
             .addClass(PerformanceInterceptor.class)
+            .addAsManifestResource("META-INF/persistence.xml", "persistence.xml")
             .addAsManifestResource(new StringAsset(
                 "<beans xmlns=\"https://jakarta.ee/xml/ns/jakartaee\" " +
                 "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" " +
@@ -55,18 +57,30 @@ public class TechMartArquillianTest {
         assertNotNull(orderService, "OrderServiceBean should be injected");
         assertNotNull(metricsTracker, "MetricsTrackerBean should be injected");
         
+        java.util.Map<String, String> properties = new java.util.HashMap<>();
+        properties.put("jakarta.persistence.schema-generation.database.action", "drop-and-create");
+        properties.put("eclipselink.ddl-generation", "drop-and-create-tables");
+        properties.put("eclipselink.ddl-generation.output-mode", "database");
+
+        jakarta.persistence.EntityManagerFactory emf = 
+            jakarta.persistence.Persistence.createEntityManagerFactory("TechMartTestPU", properties);
+        jakarta.persistence.EntityManager em = emf.createEntityManager();
+        
+        java.lang.reflect.Field emField = OrderServiceBean.class.getDeclaredField("em");
+        emField.setAccessible(true);
+        emField.set(orderService, em);
+
         metricsTracker.reset();
         long initialCount = metricsTracker.getHttpRequestCount();
 
-        try {
-            // Invoke the EJB business method; it will trigger the PerformanceInterceptor
-            orderService.getAllOrders();
-        } catch (NullPointerException e) {
-            // Expected: Weld CDI container does not initialize JPA EntityManager (@PersistenceContext)
-        }
+        java.util.List<org.techmart.lk.core.entity.Order> orders = orderService.getAllOrders();
+        assertNotNull(orders, "Orders list should not be null");
+        assertEquals(0, orders.size(), "Orders database should be empty initially");
 
-        // Verify that the interceptor successfully fired and incremented the HTTP request metric
         assertEquals(initialCount + 1, metricsTracker.getHttpRequestCount(),
             "PerformanceInterceptor should fire and increment the HTTP request count");
+
+        em.close();
+        emf.close();
     }
 }
